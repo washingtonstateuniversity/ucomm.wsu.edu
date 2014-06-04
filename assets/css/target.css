@@ -46,14 +46,7 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 .home .callbox {
 	padding-bottom:6em;
 }
-.home .metro ~ span {
-	display:block;
-}
-.home .metro figure {
-	display:block;
-	padding:0;
-	margin:0;
-}
+
 .home .metro hr {
 	margin-top:8em;
 	margin-left:2em;
@@ -70,6 +63,10 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	margin:0;
 	line-height: 0;
 	overflow: hidden;
+}
+.home .metro ul li ul, .home .metro ul li ul li {
+	margin:0;
+	padding:0;
 }
 /*.home .metro ul li:nth-child(odd) {
 	margin-right:2px;
@@ -98,7 +95,7 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
     transition: all 0.3s ease-out;
 }
 .home .metro ul li a .label h3 {
-	margin-top:-1em;
+	margin-top:-.5em;
 	margin-bottom: 0;
 	margin-left:.5em;
 	margin-right:.5em;
@@ -114,7 +111,7 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 .home .metro ul li a .label .descripto {
 	font-size: 1em;
 	line-height: 1.6em;
-	padding:1em;
+	padding:.5em 1em .5em 1em;
 	color:#464e54;
 }
 .home .metro ul li a:hover {
