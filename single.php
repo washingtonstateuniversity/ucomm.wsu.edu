@@ -22,7 +22,6 @@ if ( ! empty( $position ) ) {
 <?php get_template_part('parts/headers'); ?>
 
 <section class="row single">
-
 	<div class="column one">
 	
 		<?php while ( have_posts() ) : the_post(); ?>
