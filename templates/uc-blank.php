@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: UC Full */
+/* Template Name: UC-Blank */
 // Provides simply an unmodified <main> container
 
 ?>
@@ -14,7 +14,8 @@
 		<section class="row single">
 			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="column one">
-				<article style="margin-bottom:0; padding-bottom:0;"><header class="article-header">
+				<article style="margin-bottom:0; padding-bottom:0;">
+				<header class="article-header">
 					<h1 class="article-title"><?php the_title(); ?></h1>
 				</header></article></div>
 				<?php the_content(); ?>

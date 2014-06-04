@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: UComm Front Page */
+/* Template Name: UC-Home */
 // Provides simply an unmodified <main> container
 
 ?>

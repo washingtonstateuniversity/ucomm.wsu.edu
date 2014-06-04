@@ -7,8 +7,7 @@
 /** 
 HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand background-image:url('../images/elements/bg.png');
 **/
-
-.page-id-474 .sky {
+.home .sky {
 	background: rgb(221,190,161);
 	background: -moz-linear-gradient(45deg,  rgba(221,190,161,1) 0%, rgba(215,178,88,1) 100%);
 	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(221,190,161,1)), color-stop(100%,rgba(215,178,88,1)));
@@ -24,56 +23,164 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	padding: 0;
 	display:block;
 }
-.page-id-474 .article-header, .page-id-474 .site {
-	display:none;
+@media (min-width: 991px) { 
+	.home .sky .rebound .column {
+		width:991px;
+	} 
 }
-.page-id-474 .sky h1 {
-	font-size: 4em;
+.home .sky h1 {
+	text-align: center;
+	font-size: 400%;
 	line-height: 1.3em;
 	font-style: normal;
 	text-transform: none;
 	color:white;
-	font-family: 'OpenSans-Condensed';
+	font-family: "OpenSans-CondLight";
 	letter-spacing: -1px;
+	padding-top:.2em;
 }
-.page-id-474 .metro {
-	margin-top:90px;
-	background-color:#F4F5F5;
+.home .lead {
+	display: block;
+	margin-top:2em;
 }
-.page-id-474 .metro ul {
+.home .callbox {
+	padding-bottom:6em;
+}
+.home .metro ~ span {
+	display:block;
+}
+.home .metro figure {
+	display:block;
+	padding:0;
+	margin:0;
+}
+.home .metro hr {
+	margin-top:8em;
+	margin-left:2em;
+	margin-right:2em;
+}
+.home .metro ul {
 	margin:5px auto auto 5px;
 	padding:0 !important;
 }
-.page-id-474 .metro ul li {
+.home .metro ul li {
 	display:inline-block;
 	padding:0;
+	/*margin reset */
 	margin:0;
 	line-height: 0;
+	overflow: hidden;
 }
-.page-id-474 .hmsectional {
-	border-width:1px 0 0 0;
-	border-color:#d7dadb;
-	border-style: solid;
-}
-.metro ul li:before {
+/*.home .metro ul li:nth-child(odd) {
+	margin-right:2px;
+}*/
+.home .metro ul li:before {
 	content:none;
+	list-style: none;
 }
-.page-id-474 .featuredContent #tabs #innertabsnav li {
-	font-size: 1.4em;
+.home .metro ul li a {
+	border-bottom:none;
+	display:block;
+	width:100%;
+	height: 100%;
+}
+.home .metro ul li a .label {
+	display:block;
+	width:100%;
+	height:488px;
+	padding-top:40px;
+	position:absolute;
+	top:408px;
+	background-color:rgba(245,245,245,1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.home .metro ul li a .label h3 {
+	margin-top:-1em;
+	margin-bottom: 0;
+	margin-left:.5em;
+	margin-right:.5em;
+	padding-bottom:.5em;
+	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
+	font-style: italic;
+	font-size: 2.4em;
+	border-bottom:1px solid #d7dadb;
+}
+.home .metro ul li a .label:hover h3 {
+	color:#464e54;
+} 
+.home .metro ul li a .label .descripto {
+	font-size: 1em;
+	line-height: 1.6em;
+	padding:1em;
+	color:#464e54;
+}
+.home .metro ul li a:hover {
+	background-color:transparent;
+}
+.home .metro ul li a:hover .label {
+	top:155px;
+	background-color:#f5f5f5;
+}
+.home .metro .metroTitle {
+	background-color:#464e54;	
+}
+.home .metro ul .metroTitle .label h2 {
+	line-height: 1.2em;
+	color:#f5f5f5;
+	font-size: 300%;
+	margin-top:155px;
+	margin-left:110px;
+	background-color:transparent;
+	border-top:none;
+}
+.home .metro .metroTitle .label:hover {
+	background:none !important;
+	top:155px;
+}
+.home .metro .metroTitle a:hover {
+	background-color: transparent !important;
+}
+.home .metro .metroTitle, .home .metro .web, .home .metro .email, .home .metro .printed, .home .metro .presentations, .home .metro .photo {
 	width:48%;
+	height: 488px;
+	background-repeat: no-repeat;
 }
-.page-id-474 .featuredContent #tabs #innertabsnav li .ss-icon {
-	padding-top:10px !important;
-	padding-bottom:0;
-	margin-bottom:-20px;
-	display: block;
-	font-size: 2em;
+.home .metro .web {
+	background-image: url("http://placehold.it/488");
 }
-.page-id-474 .stgmkt {
-
+.home .metro .email {
+	background-image: url("http://placehold.it/488");
 }
- /* Photos and Videos */
- .page-id-354 .photography {
+.home .metro .printed {
+	background-image: url("/wp-content/uploads/2014/03/printed.jpg");
+}
+.home .metro .presentations {
+	background-image: url("/wp-content/uploads/2014/06/presentation.jpg");
+}
+.home .metro .photo {
+	background-image: url("http://placehold.it/488");
+}
+@media (max-width: 791px) { 
+	.home .metro .metroTitle, .home .metro .web, .home .metro .email, .home .metro .printed, .home .metro .presentations, .home .metro .photo {
+		width:100%;
+		height: 388px;
+		background-repeat: no-repeat;
+	}
+	.home .metro ul li a .label {
+		top:150px;
+		font-size: 85%;
+	}
+	.home .metro ul li {
+		border-bottom:1px solid #464e54;
+		margin-bottom:0;
+		padding-bottom:0;
+	}
+}
+/* Photos and Videos */
+.page-id-354 .photography {
  	height:28em;
  	width:100%;
  	background-image: url("/wp-content/themes/ucomm/assets/images/pages/campusview.jpg");
@@ -82,8 +189,4 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
  	background-repeat: no-repeat;
  	margin-bottom:3em;
  	margin-top:3em;
- }
- .page-id-354 .video {
- 	width:100%;
- 	height:auto; 
  }

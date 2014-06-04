@@ -41,12 +41,12 @@ main {
 	Defining fonts
 **/
 .site > a:nth-child(1) {
-	font-family: 'OpenSans-Condensed';
+	font-family: "OpenSans-CondLight";
 }
 main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main #mainAccordion .ui-icon {
 	font-family: "SSPika";
 }
-.article-header h1, .lead, main footer  {
+.article-header h1, .lead, main footer, main figcaption  {
 	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
 }
 /** 
@@ -91,50 +91,55 @@ Description: Styling of University Communications typography for p, h1, h2, h3, 
 	line-height: 100%;
 	color: #981E32;
 	background-color:transparent;
+	border-bottom:none;
 }
 .article-header {
 	display:block;
 	vertical-align: text-bottom;
 	height:40px;
-	padding-top:3.5em;
+	padding-top:1em;
 	margin-bottom:3em;
 	border-style:solid;
 	border-color:#464e54;
 	border-width:0px 0px 1px 0px;
-	padding-bottom: 1.5em;
+	padding-bottom: 4em;
 	position:relative;
 }
 .article-header h1  {
-	font-size: 2em;
+	font-size: 3em;
 	font-style: italic;
 	text-transform: none;
 	letter-spacing: 1px;
+
 }
 /*
 Title: Standard HTML DOM elements
 Description: Headers, paragraphs, lists, and HTML 5 tags
 */
-
 main h1, h2, h3, h4, h5, h6 {
 	font-weight: lighter;
 	text-transform: lowercase;
 	letter-spacing: 0;
 }
 main h1 {
+	color:#262b2e;
 }
 /* Adjusting the margin on the h2 to pull the h2 further */
 main h2 {
+	font-size:2em;
 	margin-top: .475em;
 	margin-bottom: .475em !important;
+	color:#262b2e;
 }
 /* Adjusting the margin on the h2 to pull the h3 further */
 main h3 {
-	margin-top:.5em;
-	margin-bottom:.5em;
+	margin-top:1em;
+	margin-bottom:.2em;
 	font-size:1.6em;
 }
 /* Adjusting the margin on the h2 to pull the h3 further */
 main h4 {
+	font-size: 1.2em;
 	margin-top: 1em;
 	margin-bottom: .675em;
 }
@@ -143,6 +148,9 @@ main h5 {
 	color: #4f868E;
 }
 main h6 {
+}
+main article header .center {
+	padding-bottom:1.4em;
 }
 main .ftt {
 	text-transform: none;
@@ -181,12 +189,10 @@ main h6 + p {
 .lead {
 	font-size: 1.6em;
 	line-height: 1.6em;
-	margin-bottom:1.9em;
 	letter-spacing: 0;
 }
 /* Defining Pika margin */
 .ss-icon {
-	margin-left:.5em;
 	color:inherit;
 }
 /* Add Pika for every PDF */
@@ -199,7 +205,7 @@ a[href$=".pdf"]:after {
 main ul, main ol {
 	line-height: 1.4em;
 	margin-bottom:2em;
-	margin-left:4em;
+	margin-left:.885em;
 }
 main ul li ul {
 	padding-left:1.4em;
@@ -235,21 +241,15 @@ main p + ol {
 	margin-top:-1em;
 	width:70%;
 }
+main figure + h1, main figure + h2, main figure + h3, main figure + h4, main figure + h5, main figure + p {
+	margin-top:2em;
+}
 main ul li {
 	text-align: -webkit-match-parent;
-	list-style-type: none;
+	list-style-type: disc;
 	position:relative;
 	padding:.125em;
 	margin-bottom:4px;
-}
-main ul li:before {
-	font-size: .725em;
-	width:1em;
-	height: 1em;
-	vertical-align: middle;
-	content: '\25B9';
-	position:absolute;
-	left:-20px;
 }
 main ol li {
 	text-align: -webkit-match-parent;
@@ -257,11 +257,14 @@ main ol li {
 	padding:.125em;
 	margin-bottom:5px;
 }
+.addcrimson {
+	color:#981e32;
+}
 /* 
 	Styling of linked elements 
 */
 main a {
-	background-color:#d3e1e3;
+	border-bottom:1px solid #4F868E;
 	color: #4F868E;
 	white-space: pre-wrap; /* css-3 */    
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
@@ -270,7 +273,16 @@ main a {
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 main a:hover {
+	border-bottom:1px solid #193838;
+	background-color:#d3e1e3;
 	color: #193838;
+	-webkit-transition: background-color 0.5s linear;
+	-moz-transition: background-color 0.5s linear;
+	-o-transition: background-color 0.5s linear;
+	transition: background-color 0.5s linear;
+}
+.main a img {
+	border-bottom:none;
 }
 /*
 Title: Blockquotes & Citations
@@ -313,24 +325,20 @@ blockquote  cite:before {
 }
 .bqsmall {
 	width:25%;
-	font-size:94%;
+	font-size:105%;
 	padding:1em;
 }
 .bqsmall cite {
-	font-size:1em;
+	font-size:90%;
 	padding-top:.5em;
 }
 .bqmd {
 	width:45%;
 }
-.padleft {
-	padding-left:1em;
-	padding-right:0;
-}
 main sup {
 	font-size: 95%;
 }
-main aside {
+main .page aside {
 	background-image:url('../images/elements/bg-fourty.png');
 	background-attachment: fixed;
 	background-color: #eddccc;
@@ -348,6 +356,14 @@ main aside ul {
 	margin-bottom:0;
 }
 /* styles applied only to structure and framework */
+.padleft {
+	padding-left:1em;
+	padding-right:0;
+}
+.padright {
+	padding-right:1em;
+	padding-left:0;
+}
 .page-template-templatesucblank-php .halves {
 	width:791px;
 }
@@ -368,13 +384,19 @@ main .related + section article {
 	margin-top:12px;
 	margin-bottom:12px;
 }
-.table caption {
+.table caption, .tablepress-table-name {
 	font-size: 1.5em;
 	padding-top:1em;
 	padding-bottom:1em;
 }
+.tablepress-table-name {
+	text-transform: none;
+	color:#464e54;
+	text-align: center;
+	font-size: 1.4em;
+}
 .table th {
-	font-weight: bold;
+	font-weight: 700;
 	text-align: center;
 	padding-bottom:1em;
 	font-size:1.1em;
@@ -477,15 +499,48 @@ main hr:after {
 	-o-transform: translate(-50%);
 	transform: translate(-50%);  
 }
+.seperated {
+	border-top: solid 1px #d7dadb; 
+	padding-top: 8px;
+}
 main figure img {
-	margin:.5em;
-	padding:0;
+
 }
 main figure figcaption {
-	font-size: .9em;
-	padding-left:.8em;
+	text-align: center;
+	font-size: 1em;
 	font-style: italic;
-	border-left:solid 1px #d7dadb;
+}
+main figure {
+	border-bottom:solid 1px #d7dadb;
+}
+main .nested-halves {
+	width:100%;
+	text-align: top;
+}
+main .nested-one {
+	display: block;
+	width:48%;
+	float:left;
+	padding-right:1%;
+}
+main .nested-two {
+	display: block;
+	width:48%;
+	float:left;
+	padding-left:1%;
+}
+@media (max-width: 791px) { 
+	main .nested-one {
+		display: block;
+		width:100%;
+		clear:both;
+	}
+	main .nested-two {
+		display: block;
+		width:100%;
+		clear:both;
+	}
 }
 /*
 Title: Components added to the UComm template such as spotlight section, library of work, featured frames
@@ -495,21 +550,22 @@ Description: Expanding on the Spine template with custom components and sections
 	overflow: hidden;
 	padding-top:1em;
 	padding-bottom:1em;
-	background: rgb(244,242,235);
-	background: -moz-linear-gradient(45deg,  rgba(244,242,235,1) 0%, rgba(227,223,205,1) 100%);
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(244,242,235,1)), color-stop(100%,rgba(227,223,205,1)));
-	background: -webkit-linear-gradient(45deg,  rgba(244,242,235,1) 0%,rgba(227,223,205,1) 100%);
-	background: -o-linear-gradient(45deg,  rgba(244,242,235,1) 0%,rgba(227,223,205,1) 100%);
-	background: -ms-linear-gradient(45deg,  rgba(244,242,235,1) 0%,rgba(227,223,205,1) 100%);
-	background: linear-gradient(45deg,  rgba(244,242,235,1) 0%,rgba(227,223,205,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f2eb', endColorstr='#e3dfcd',GradientType=1 );
 	margin-top:1em;
+	height:100%;
+	background: rgb(245,245,245);
+	background: -moz-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(245,245,245,1)), color-stop(50%,rgba(227,223,205,1)), color-stop(100%,rgba(245,245,245,1)));
+	background: -webkit-linear-gradient(left,  rgba(245,245,245,1) 0%,rgba(227,223,205,1) 50%,rgba(245,245,245,1) 100%);
+	background: -o-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
+	background: -ms-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
+	background: linear-gradient(to right, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f5f5f5',GradientType=1 );
 }
 .spotlightbg {
 	display: block;
 	position: absolute;
 	top: 75px;
-	left: -90px;
+	left: 25px;
 	bottom: 0;
 	right: 0;
 	font-size: 12em;
@@ -517,67 +573,9 @@ Description: Expanding on the Spine template with custom components and sections
 	opacity: 0.4;
 }
 /* Create the Featured content frame */
-.featuredContent {
-	border-width:8px 0 8px 0;
-	border-color:#e5cd93;
-	border-style: solid;
-	padding-bottom:2em;
-	padding-top:2em;
-	background-color:#5e6a71;
+.featuredList {
 }
-.featuredContent #tabs .ui-tabs-panel {
-	/*height:500px;*/
-	margin-top:-2px;
-	width:90%;
-	padding:2em;
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#f5f5f5; !important;
-	border-top-left-radius: 10px 10px;
-	border-top-right-radius: 10px 10px;
-	border-bottom-left-radius: 10px 10px;
-	border-bottom-right-radius: 10px 10px;
-}
-.featuredContent #tabs .ui-tabs-nav {
-	padding:0;
-	margin:0;
-}
-.featuredContent #tabs #innertabsnav {
-	/* Over ride global ul */
-	margin-left:auto;
-	margin-right:auto;
-	width:90%;
-	text-align: center;
-}
-.featuredContent #tabs #innertabsnav li:before {
-	content:none;
-}
-.featuredContent #tabs #innertabsnav li {
-	display:inline-block;
-	/*reset margin */
-	margin:0 !important;
-}
-.featuredContent #tabs #innertabsnav li a {
-	padding:1em;
-	display: block;
-	color:#d3e1e3;
-	background-color:transparent !important;
-}
-.featuredContent #tabs #innertabsnav a .ss-icon, .featuredContent #tabs #innertabsnav a img { 
-	display: block;
-	font-size:2em;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:-24px;
-	padding-bottom:0;
-	padding-top:.4em;
-}
-.featuredContent #tabs #innertabsnav .ui-tabs-active a {
-	color:#464e54 !important;
-	background-color:#f5f5f5 !important;
-	border-top-left-radius: 10px 10px;
-	border-top-right-radius: 10px 10px;
-}
+/* Create the main accordions */
 main #mainAccordion {
 	margin-top:1em;
 	margin-bottom:1em;
@@ -614,7 +612,7 @@ main #mainAccordion .ui-state-active .ui-icon:before {
 	content:'\2B07';
 }
 main #mainAccordion .ui-icon:before {
-		content:'\27A1';
+	content:'\27A1';
 }
 main #mainAccordion .ui-accordion-header:hover, main #mainAccordion .ui-state-active .ui-icon:before  {
 	color: #193838;
@@ -623,7 +621,8 @@ main #mainAccordion .ui-accordion-content {
 	border-style:solid;
 	border-color:#d7dadb;
 	border-width:1px 0px 0px 0px;
-	padding:1em;
+	padding-top:2em;
+	padding-bottom:2em;
 }
 /*
 	Affixed and affixed sidebar
@@ -647,7 +646,7 @@ main #mainAccordion .ui-accordion-content {
 #fixedSide h6 {
 	margin-bottom:1em;
 }
-#fixedSide ol li ol, #fixedSide ul li ul{
+#fixedSide ol li ol, #fixedSide ul li ul {
 	padding-bottom:0;
 }
 #fixedSide ol li, #fixedSide ul li {
@@ -657,70 +656,49 @@ main #mainAccordion .ui-accordion-content {
 	padding-bottom: 0;
 }
 #fixedSide ol li ol, #fixedSide ul li ul {
-	padding-top:0px;
+	margin-left:0;
+	padding-bottom:.2em;
 }
 #fixedSide ol li ol li, #fixedSide ul li ul li {
 	font-size: inherit;
 	margin-bottom:4px;
 	padding-bottom: 0;
 	line-height: 1.3em;
+
 }
 /*
 	Call to actions
 */
 .call {
-	width: 50%;
-	height: 100%;
-	margin-left:auto;
-	margin-right:auto;
 	font-size: 1.4em;
-}
-.call a {
-	text-align: center;
+	background-color: rgba(152, 30, 50,1);
+	color:#f5f5f5;
 	text-transform: uppercase;
 	padding-top:20px;
 	padding-bottom:20px;
-	display:block;
-	width:100%;
-	height:100%;
-	border-style:double;
-	border-width: 4px 4px 4px 4px;
-	border-color:#4f868e;
-	text-shadow:0px 1px 1px #fff;
+	border:none;
+	padding:1em;
+	display:inline-block;
+}
+.call .ss-icon {
+	font-size: 1.2em;
+	vertical-align: middle;
+}
+.call:hover {
+	background-color: #c60c30;
+	color:#f5f5f5;
+	border:none;
 }
 .fixed .call {
-	color:#4f868e;
-	font-size: 1.2em;
-	top: 0; 
-	margin-top:0;
-	margin-bottom:0;
-	margin-right:0;
-	margin-left:500px;
-	padding-top:0px;	
+	top: 0;
 }
 .callbox {
+	text-align: center;
+	padding-top:5em;
+	padding-bottom:4em;
 }
-/* 
-	Backgrounds and supplimentary colors
-*/
-.bdbg {
-	background-image:url('../images/elements/bg.png');
-	background-attachment: fixed;
-}
-.addcrimson {
-	color:#981e32;
-}
-.addgray {
-	color:#5e6a71;
-}
-.addyellow {
-	color:#c69214;
-}
-.addorange {
-	color:#b67233;
-}
-.addgreen {
-	color:#8f7e35;
+.two .call {
+	font-size: 90%;
 }
 /*
 Title: Blog Posts styles
@@ -734,16 +712,16 @@ main > .ucomm-bookmark .category, .comments {
 /* Changes the header style on posts only */
 .single-post .article-header {
 	width:100%;
-	font-size: 2em;
+	padding-top:5em;
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
 	border-style: none;
 }
-/* Published and by source info */
-.single-post .article-header .source {
-	font-size:45%;
+.single-post .ucomm-bookmark .post {
+	display:none;
 }
+
 /* Add to section to create a feautred header image */
 .single-post .article-body .libHeader {
 	margin-top:8em;
