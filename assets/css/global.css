@@ -97,7 +97,7 @@ Description: Styling of University Communications typography for p, h1, h2, h3, 
 	display:block;
 	vertical-align: text-bottom;
 	height:40px;
-	padding-top:1em;
+	padding-top:3.4em;
 	margin-bottom:3em;
 	border-style:solid;
 	border-color:#464e54;
@@ -401,6 +401,7 @@ main .related + section article {
 	padding-bottom:1em;
 	font-size:1.1em;
 	vertical-align: middle;
+	background-color: #D7DADB !important;
 }
 .table tr td, .table th {
 	padding:.3em;

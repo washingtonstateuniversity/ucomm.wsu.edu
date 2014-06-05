@@ -160,10 +160,10 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	background-image: url("/wp-content/uploads/2014/06/presentation.jpg");
 }
 .home .metro .photo {
-	background-image: url("http://placehold.it/488");
+	background-image: url("/wp-content/uploads/2014/06/metro-photo.jpg");
 }
 .home .related {
-	margin-top:-2em;
+	margin-top:-3em;
 }
 @media (max-width: 480px) { 
 	.home .sky h1 {
