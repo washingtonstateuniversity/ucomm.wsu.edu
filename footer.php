@@ -8,7 +8,7 @@
 <?php wp_footer(); ?>
 <script>
 (function($){
-  $( "#mainAccordion" ).accordion({
+  $( ".mainAccordion" ).accordion({
        heightStyle: "content",
   });  
   $(function() {

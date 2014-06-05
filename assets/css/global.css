@@ -43,7 +43,7 @@ main {
 .site > a:nth-child(1) {
 	font-family: "OpenSans-CondLight";
 }
-main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main #mainAccordion .ui-icon {
+main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon {
 	font-family: "SSPika";
 }
 .article-header h1, .lead, main footer, main figcaption  {
@@ -281,7 +281,7 @@ main a:hover {
 	-o-transition: background-color 0.5s linear;
 	transition: background-color 0.5s linear;
 }
-.main a img {
+main a img {
 	border-bottom:none;
 }
 /*
@@ -516,17 +516,21 @@ main figure {
 }
 main .nested-halves {
 	width:100%;
+	display: inline-block;
 	text-align: top;
+	clear: both;
+	padding-top:0;
+	margin-top:0;
 }
 main .nested-one {
 	display: block;
-	width:48%;
+	width:49%;
 	float:left;
 	padding-right:1%;
 }
 main .nested-two {
 	display: block;
-	width:48%;
+	width:49%;
 	float:left;
 	padding-left:1%;
 }
@@ -576,15 +580,15 @@ Description: Expanding on the Spine template with custom components and sections
 .featuredList {
 }
 /* Create the main accordions */
-main #mainAccordion {
+main .mainAccordion {
 	margin-top:1em;
 	margin-bottom:1em;
 }
-main #mainAccordion .ui-accordion-header {
+main .mainAccordion .ui-accordion-header {
 	border-bottom:1px solid #f5f5f5;
 	cursor: pointer;
 }
-main #mainAccordion .ui-accordion-header-active {
+main .mainAccordion .ui-accordion-header-active {
 	background-color:#f5f5f5 !important; 
 	-webkit-transition: background-color 1000ms linear;
     -moz-transition: background-color 1000ms linear;
@@ -593,36 +597,40 @@ main #mainAccordion .ui-accordion-header-active {
     transition: background-color 1000ms linear;
     color: #464e54 !important;
   }
-main #mainAccordion .ui-state-default {
+main .mainAccordion .ui-state-default {
 	background-color:#d3e1e3;
 	color: #4F868E;
 }
-main #mainAccordion h3 {
+main .mainAccordion h3 {
 	margin:0;
-	padding:.5em;
+	padding-left:.5em;
+	font-size: 1.2em;
 }
-main #mainAccordion .ui-accordion-header-icon {
+main .mainAccordion .ui-accordion-header-icon {
 	width:25px;
 	height:25px;
 	margin-right:.3em;
 	display: inline-block;
 	font-size: .6em;
 }
-main #mainAccordion .ui-state-active .ui-icon:before {
+main .mainAccordion .ui-state-active .ui-icon:before {
 	content:'\2B07';
 }
-main #mainAccordion .ui-icon:before {
+main .mainAccordion .ui-icon:before {
 	content:'\27A1';
 }
-main #mainAccordion .ui-accordion-header:hover, main #mainAccordion .ui-state-active .ui-icon:before  {
+main .mainAccordion .ui-accordion-header:hover, main .mainAccordion .ui-state-active .ui-icon:before  {
 	color: #193838;
 }
-main #mainAccordion .ui-accordion-content {
+main .mainAccordion .ui-accordion-content {
 	border-style:solid;
 	border-color:#d7dadb;
 	border-width:1px 0px 0px 0px;
-	padding-top:2em;
-	padding-bottom:2em;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+main .mainAccordion .ui-accordion-content ul {
+	margin-bottom:0;
 }
 /*
 	Affixed and affixed sidebar
@@ -704,6 +712,11 @@ main #mainAccordion .ui-accordion-content {
 Title: Blog Posts styles
 Description: Create stylistic elements for blog post pages
 */
+
+main .blog-meta {
+	font-size: 87%;
+	padding-left:.5em;
+}
 
 /* Hiding the category name from the hgroup */ 
 main > .ucomm-bookmark .category, .comments {
