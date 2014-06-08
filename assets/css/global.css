@@ -140,6 +140,7 @@ main h3 {
 /* Adjusting the margin on the h2 to pull the h3 further */
 main h4 {
 	font-size: 1.2em;
+	line-height: 1.3em;
 	margin-top: 1em;
 	margin-bottom: .675em;
 }
@@ -504,6 +505,7 @@ main hr:after {
 	border-top: solid 1px #d7dadb; 
 	padding-top: 8px;
 }
+
 main figure img {
 
 }
@@ -551,32 +553,6 @@ main .nested-two {
 Title: Components added to the UComm template such as spotlight section, library of work, featured frames
 Description: Expanding on the Spine template with custom components and sections
 */
-.spotlight {
-	overflow: hidden;
-	padding-top:1em;
-	padding-bottom:1em;
-	margin-top:1em;
-	height:100%;
-	background: rgb(245,245,245);
-	background: -moz-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(245,245,245,1)), color-stop(50%,rgba(227,223,205,1)), color-stop(100%,rgba(245,245,245,1)));
-	background: -webkit-linear-gradient(left,  rgba(245,245,245,1) 0%,rgba(227,223,205,1) 50%,rgba(245,245,245,1) 100%);
-	background: -o-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
-	background: -ms-linear-gradient(left, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
-	background: linear-gradient(to right, rgba(245,245,245,1) 0%, rgba(227,223,205,1) 50%, rgba(245,245,245,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f5f5f5',GradientType=1 );
-}
-.spotlightbg {
-	display: block;
-	position: absolute;
-	top: 75px;
-	left: 25px;
-	bottom: 0;
-	right: 0;
-	font-size: 12em;
-	color:#E3DFCD;
-	opacity: 0.4;
-}
 /* Create the Featured content frame */
 .featuredList {
 }
@@ -713,12 +689,50 @@ main .mainAccordion .ui-accordion-content ul {
 Title: Blog Posts styles
 Description: Create stylistic elements for blog post pages
 */
-
-main .blog-meta {
-	font-size: 87%;
-	padding-left:.5em;
+main .blog-loop {
+	margin-top:2em;
+	width:100%;
 }
-
+main .blog-loop li {
+	list-style: none;
+	padding:.5em 0 3em 0;
+	height:100%;
+}
+main .blog-loop li:before {
+	content: '\e973';
+	display:inline-block;
+	position:absolute;
+	left:-2em;
+	top:.6em;
+}
+main .blog-loop h4 {
+	padding-bottom:0;
+	padding-top:0;
+	margin-bottom:-12px;
+	margin-top:0;
+	text-transform: none;
+}
+main .blog-meta, main .blog-cattag, main .blog-excerpt {
+	font-size: 90%;
+	color:#5e6a71;
+}
+main .blog-excerpt {
+	display: block;
+	margin-bottom:0;
+	margin-top:2em;
+}
+main .blog-cattag {
+	display: block;
+	width:100%;
+	padding:.5em;
+	background-image:url('../images/elements/bg-fourty.png');
+	background-attachment: fixed;
+	background-color: #eddccc;
+	border-style:solid;
+	border-color:#ddbea1;
+	border-width:1px 1px 1px 1px;
+	text-shadow:0px 1px 1px #f5f5f5;
+}
 /* Hiding the category name from the hgroup */ 
 main > .ucomm-bookmark .category, .comments {
 	display:none !important;
@@ -726,16 +740,42 @@ main > .ucomm-bookmark .category, .comments {
 /* Changes the header style on posts only */
 .single-post .article-header {
 	width:100%;
-	padding-top:5em;
+	padding-top:8em;
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
 	border-style: none;
+	text-align: center;
+	clear: both;
+}
+.single-post .article-header .article-title {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.single-post .sub-title {
+	font-size: 40%;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-style: normal;
+	letter-spacing: 0px;
+	color:#464e54;
+
+}
+.single-post .article-header hgroup.source {
+	border-bottom:1px solid;
+	padding-bottom:18px !important;
+	text-transform: none;
+	color:#5e6a71;
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
 }
 .single-post .ucomm-bookmark .post {
 	display:none;
 }
-
+.single-post .article-body {
+	margin-top:15em !important;
+}
 /* Add to section to create a feautred header image */
 .single-post .article-body .libHeader {
 	margin-top:8em;
