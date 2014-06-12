@@ -26,16 +26,19 @@
     });
   });
    $(document).ready(function(){
-       $(window).bind('scroll', function() {
-       var callHeight = $( window ).height() - 70;
-         if ($(window).scrollTop() > callHeight) {
-           $('.fixme').addClass('fixed');
-         }
-         else {
-           $('.fixme').removeClass('fixed');
-         }
+
+      $(document).on('scroll',function(){
+        var top,call_top;
+        call_top = $('.fixme').scrollTop();
+        top = $(document).scrollTop();
+        if(top>call_top){
+            $('.fixme').addClass('fixed');
+        }else{
+            $('.fixme').removeClass('fixed');
+        }
+
       });
-    });
+   });
 }(jQuery));
 </script>
 </body>

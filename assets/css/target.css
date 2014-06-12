@@ -23,6 +23,9 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	padding: 0;
 	display:block;
 }
+.home .related {
+	margin-top:-3em;
+}
 @media (min-width: 991px) { 
 	.home .sky .rebound .column {
 		width:991px;
@@ -46,17 +49,16 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 .home .callbox {
 	padding-bottom:6em;
 }
-
-.home .metro hr {
+.metro hr {
 	margin-top:6em;
 	margin-left:2em;
 	margin-right:2em;
 }
-.home .metro ul {
+.metro ul {
 	margin:5px auto auto 5px;
 	padding:0 !important;
 }
-.home .metro ul li {
+.metro ul li {
 	display:inline-block;
 	padding:0;
 	/*margin reset */
@@ -64,24 +66,24 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	line-height: 0;
 	overflow: hidden;
 }
-.home .metro ul li ul, .home .metro ul li ul li {
+.metro ul li ul, .metro ul li ul li {
 	margin:0;
 	padding:0;
 }
 /*.home .metro ul li:nth-child(odd) {
 	margin-right:2px;
 }*/
-.home .metro ul li:before {
+.metro ul li:before {
 	content:none;
 	list-style: none;
 }
-.home .metro ul li a {
+.metro ul li a {
 	border-bottom:none;
 	display:block;
 	width:100%;
 	height: 100%;
 }
-.home .metro ul li a .label {
+.metro ul li a .label {
 	display:block;
 	width:100%;
 	height:488px;
@@ -94,7 +96,7 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.home .metro ul li a .label h3 {
+.metro ul li a .label h3 {
 	margin-top:-.5em;
 	margin-bottom: 0;
 	margin-left:.5em;
@@ -106,27 +108,27 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	font-size: 2.4em;
 	border-bottom:1px solid #d7dadb;
 }
-.home .metro ul li a .label:hover h3 {
+.metro ul li a .label:hover h3 {
 	color:#464e54;
 } 
-.home .metro ul li a .label .descripto {
+.metro ul li a .label .descripto {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	padding:0em 1em .5em 1em;
 	margin-top:0;
 	color:#464e54;
 }
-.home .metro ul li a:hover {
+.metro ul li a:hover {
 	background-color:transparent;
 }
-.home .metro ul li a:hover .label {
+.metro ul li a:hover .label {
 	top:155px;
 	background-color:#f5f5f5;
 }
-.home .metro .metroTitle {
+.metro .metroTitle {
 	background-color:#464e54;	
 }
-.home .metro ul .metroTitle .label h2 {
+.metro ul .metroTitle .label h2 {
 	line-height: 1.2em;
 	color:#f5f5f5;
 	font-size: 300%;
@@ -135,54 +137,87 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 	background-color:transparent;
 	border-top:none;
 }
-.home .metro .metroTitle .label:hover {
+.metro .metroTitle .label:hover {
 	background:none !important;
 	top:155px;
 }
-.home .metro .metroTitle a:hover {
+.metro .metroTitle a:hover {
 	background-color: transparent !important;
 }
-.home .metro .metroTitle, .home .metro .web, .home .metro .email, .home .metro .printed, .home .metro .presentations, .home .metro .photo {
+.metro .metroTitle, .metro .web, .metro .email, .metro .printed, .metro .presentations, .metro .photo {
 	width:49.5%;
 	height: 488px;
 	background-repeat: no-repeat;
 }
-.home .metro .web {
-	background-image: url("http://placehold.it/488");
+.metro .web {
+	background-image: url("/wp-content/uploads/2014/06/webhome.jpg");
 }
-.home .metro .email {
+.metro .email {
 	background-image: url("/wp-content/uploads/2014/06/metro-email.jpg");
 }
-.home .metro .printed {
+.metro .printed {
 	background-image: url("/wp-content/uploads/2014/03/printed.jpg");
 }
-.home .metro .presentations {
+.metro .presentations {
 	background-image: url("/wp-content/uploads/2014/06/presentation.jpg");
 }
-.home .metro .photo {
+.metro .photo {
 	background-image: url("/wp-content/uploads/2014/06/metro-photo.jpg");
 }
-.home .related {
-	margin-top:-3em;
+.smallM .metro {
+	margin-bottom:1.2em;
 }
-@media (max-width: 480px) { 
+.smallM .metro ul li a:hover {
+	background-color: rgba(211, 225, 227,0.5 );
+}
+.smallM .metroTitle, .smallM .descripto {
+	display:none;
+}
+.smallM .metro ul li a .label h3 {
+	font-size: 1.1em;
+	padding:0;
+	margin-top:-40px;
+	margin-left:0;
+	position: relative;
+	border-bottom: none;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-style: normal;
+}
+.smallM .metro ul li a .label {
+	top:160px;
+	height:50px;
+	padding-top:0;
+}
+.smallM .metro ul li a:hover .label {
+	top:160px;
+}
+.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .smallM .metro .photo  {
+	height:200px;
+	width:19.5%;
+	background-size: 200px auto;
+	background-position: top center;
+}
+@media (max-width: 790px) { 
 	.home .sky h1 {
 		font-size: 280%;
 	}
 	.home .lead {
-		font-size: 120%;
+		font-size: 130%;
+		margin-left:0;
+		margin-right:0;
 	}
 	.home .metro .metroTitle, .home .metro .web, .home .metro .email, .home .metro .printed, .home .metro .presentations, .home .metro .photo {
 		width:100%;
 		height: 388px;
 		background-repeat: no-repeat;
+		background-size: 100% auto;
 	}
 	.home .metro ul li a .label {
-		top:120px;
+		top:155px;
 		font-size: 85%;
 	}
 	.home .metro .metroTitle {
-		height:140px;
+		height:100px;
 		top:0;
 		font-size: 80%;
 	}
@@ -190,6 +225,26 @@ HOMEPAGE / Marketing experts helping you unleash the power of the wsu brand back
 		margin-top:0 !important;
 		margin-left:4% !important; 
 		padding-left:0;
+	}
+	.smallM .metro {
+		margin-bottom:1.2em;
+}
+	.smallM .metro ul li a .label {
+		top:100px;
+		height:50px;
+		padding-top:0;
+}
+	.smallM .metro ul li a:hover .label {
+		top:100px;
+}
+	.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .metro .photo  {
+		height:150px;
+		width:100%;
+		background-size: 100% auto;
+		background-position: top left;
+	}
+	.smallM .metro ul li a:hover {
+		background-color: transparent;
 	}
 }
 /* Photos and Videos */
