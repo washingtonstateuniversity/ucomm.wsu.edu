@@ -134,12 +134,11 @@ main h2 {
 /* Adjusting the margin on the h2 to pull the h3 further */
 main h3 {
 	margin-top:1em;
-	margin-bottom:.2em;
+
 	font-size:1.6em;
 }
 /* Adjusting the margin on the h2 to pull the h3 further */
 main h4 {
-	font-size: 1.2em;
 	line-height: 1.3em;
 	margin-top: 1em;
 	margin-bottom: .675em;
@@ -207,6 +206,11 @@ main ul, main ol {
 	line-height: 1.4em;
 	margin-bottom:2em;
 	margin-left:.885em;
+}
+@media (max-width: 480px) { 
+	main ul, main ol, main address {
+		margin-left:0;
+	}
 }
 main ul li ul {
 	padding-left:1.4em;
@@ -349,7 +353,7 @@ blockquote  cite:before {
 main sup {
 	font-size: 95%;
 }
-main .page aside {
+main aside {
 	background-image:url('../images/elements/bg-fourty.png');
 	background-attachment: fixed;
 	background-color: #eddccc;
@@ -363,8 +367,17 @@ main .page aside {
 	line-height: 1.5em;
 	margin:1em;
 }
+main aside h4 {
+	margin-top:0;
+	padding-top:0;
+}
 main aside ul {
 	margin-bottom:0;
+	margin-left:0;
+}
+main .asism {
+	font-size: 90%;
+	padding:.5em;
 }
 /* styles applied only to structure and framework */
 .padleft {
@@ -440,6 +453,9 @@ main .related + section article {
 }
 .table-striped tr:nth-child(even){
 	background-color:#eff0f1;
+}
+.dataTables_filter {
+	margin-bottom:.8em;
 }
 /* Styles applied to footers and rule lines */
 main address {
@@ -529,6 +545,9 @@ main figure figcaption {
 }
 main figure {
 	border-bottom:solid 1px #d7dadb;
+}
+.page-template-templatesuc-side-right-php .two {
+	margin-top:11em;
 }
 main .nested-halves {
 	width:100%;
@@ -639,9 +658,6 @@ main .mainAccordion .ui-accordion-content ul {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-#fixedSide {
-	margin-top:11em;
-}
 #fixedSide .fixed {
 	width:320px;
 }
@@ -725,6 +741,7 @@ Description: Create stylistic elements for forms and labels
 .gform_body {
 
 }
+
 /*
 Title: Blog Posts styles
 Description: Create stylistic elements for blog post pages
