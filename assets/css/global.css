@@ -112,6 +112,21 @@ Description: Styling of University Communications typography for p, h1, h2, h3, 
 	letter-spacing: 1px;
 
 }
+@media (max-width: 480px) { 
+	.size-lt-medium main > header.ucomm-bookmark {
+		left:2.4em;
+	}
+	.site > a:nth-child(1) {
+		font-size:1.5em;
+	}
+	.article-header {
+		padding-bottom: 2em;
+	
+	}
+	.article-header h1  {
+		font-size: 2em;
+	}
+}
 /*
 Title: Standard HTML DOM elements
 Description: Headers, paragraphs, lists, and HTML 5 tags
@@ -204,7 +219,7 @@ a[href$=".pdf"]:after {
 /* Styling of ordered lists and un-ordered lists */
 main ul, main ol {
 	line-height: 1.4em;
-	margin-bottom:2em;
+	margin-bottom:1em;
 	margin-left:.885em;
 }
 @media (max-width: 480px) { 
@@ -277,7 +292,7 @@ main a {
     white-space: -o-pre-wrap; /* Opera 7 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
-main a:hover {
+main a:hover, main a:focus {
 	border-bottom:1px solid #193838;
 	background-color:#d3e1e3;
 	color: #193838;
@@ -287,8 +302,9 @@ main a:hover {
 	transition: background-color 0.5s linear;
 }
 main a img {
-	border-bottom:none;
-}
+	text-decoration: none !important;
+	border: 0 none;
+	}
 /*
 Title: Blockquotes & Citations
 Description: Styling of block quotes & citations 
@@ -390,6 +406,19 @@ main .asism {
 }
 .padtop {
 	padding-top:1.6em;
+}
+@media (max-width: 480px) { 
+	.padleft {
+		padding-left:0;
+		padding-right:0;
+	}
+	.padright {
+		padding-right:0;
+		padding-left:0;
+	}
+	.padtop {
+		padding-top:0;
+	}
 }
 .page-template-templatesucblank-php .halves {
 	width:791px;
@@ -548,6 +577,11 @@ main figure {
 }
 .page-template-templatesuc-side-right-php .two {
 	margin-top:11em;
+}
+@media (max-width: 790px) { 
+	.page-template-templatesuc-side-right-php .two {
+		margin-top:0;
+	}
 }
 main .nested-halves {
 	width:100%;
@@ -842,6 +876,14 @@ main > .ucomm-bookmark .category, .comments {
 }
 .single-post .article-body {
 	margin-top:11em !important;
+	padding-left:3em;
+	padding-right:3em;
+}
+@media (max-width: 480px) { 
+	.single-post .article-body {
+		padding-left:0;
+		padding-right:0;
+	}
 }
 /* Add to section to create a feautred header image */
 .single-post .article-body .libHeader {
