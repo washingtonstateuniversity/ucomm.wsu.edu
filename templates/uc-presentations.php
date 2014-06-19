@@ -11,9 +11,12 @@
   <div class="column one">
     <?php get_template_part('articles/article'); ?>
   </div><!--/column-->
-  <section class="lib-work">
-    <?php 
-      $thumbnails = get_posts(array('posts_per_page' => 5,'tag' => 'presentations'));
+ 
+</section>
+ <section class="row lib-work">
+    <h3>Library of work</h3>
+      <?php 
+      $thumbnails = get_posts(array('posts_per_page' => 9,'tag' => 'presentations'));
       foreach ($thumbnails as $thumbnail) {
         if ( has_post_thumbnail($thumbnail->ID)) {
           echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
@@ -22,9 +25,8 @@
         }
       }
     ?>
-  </section>  
-</section>
 
+  </section>  
 <?php endwhile; endif; ?>
 
 </main>

@@ -189,13 +189,13 @@ main p+p {
 	margin-top:-1em;
 }
 /* Styling of the paragraphs that follow h5 to match the h5 tag */
-main h5 + p {
+main h5+p {
 	font-size: .875em;
 	line-height: 1.875em;
 	color: #4f868E;
 }
 /* Styling of the paragraphs that follow h6 to match the h5 tag */
-main h6 + p {
+main h6+p {
 	font-size: .875em;
 	line-height: 1.875em;
 	color: #000;
@@ -244,20 +244,20 @@ main ul li ul li:before {
 main ul li ul li {
 	list-style: disc;
 }
-main h2 + ul {
+main h2+ul,  {
 	padding-top:1em;
 }
-main h3 + ol {
+main h3+ol main header+ol {
 	margin-top:2em;
 }
-main h3 + ul {
+main h3+ul, main header+ul {
 	margin-top:1em;
 }
-main p + ul {
+main p+ul {
 	margin-top:-1.2em;
 	
 }
-main p + ol {
+main p+ol {
 	margin-top:-1em;
 
 }
@@ -406,6 +406,9 @@ main .asism {
 }
 .padtop {
 	padding-top:1.6em;
+}
+.padbottom {
+	padding-bottom:1.6em;
 }
 @media (max-width: 480px) { 
 	.padleft {
@@ -832,52 +835,60 @@ main .blog-cattag {
 	border-width:1px 1px 1px 1px;
 	text-shadow:0px 1px 1px #f5f5f5;
 }
+/* Library of work */
+.lib-work {
+	padding-left:2em;
+	padding-right:2em;
+	padding-bottom:2em;
+	position:relative;
+}
+.lib-work h3 {
+	margin-bottom:1em;
+	margin-top:0;
+	padding-top:0;
+}
+.lib-work .attachment-thumbnail {
+	display:inline-block;
+	margin:.5em;
+}
+.lib-work a {
+	border-bottom: 0;
+}
+.lib-work a:hover, .lib-work a:focus {
+	border-bottom: 0;
+	background-color:0;
+}
 /* Hiding the category name from the hgroup */ 
 main > .ucomm-bookmark .category, .comments {
 	display:none !important;
 }
 /* Changes the header style on posts only */
 .single-post .article-header {
-	width:100%;
-	padding-top:8em;
+	width:60%;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:1em;
+	margin-bottom:0;
 	text-align: center;
-	border-style: none;
-	text-align: center;
-	clear: both;
-}
-.single-post .article-header .article-title {
-	width:50%;
-	margin-left:auto;
-	margin-right:auto;
 }
 .single-post .sub-title {
-	font-size: 50%;
 	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	font-style: normal;
 	letter-spacing: 0px;
 	color:#464e54;
-	display: block;
-	clear: both;
 	font-size: 40%;
 }
 .single-post .article-header hgroup.source {
-	border-bottom:1px solid;
-	padding-bottom:18px !important;
 	text-transform: none;
-	color:#5e6a71;
-	width:50%;
-	margin-left:auto;
-	margin-right:auto;
 }
 .single-post .ucomm-bookmark .post {
 	display:none;
 }
 .single-post .article-body {
-	margin-top:11em !important;
 	padding-left:3em;
 	padding-right:3em;
+	padding-top:5em;
+	width:850px;
 }
 @media (max-width: 480px) { 
 	.single-post .article-body {
@@ -885,12 +896,6 @@ main > .ucomm-bookmark .category, .comments {
 		padding-right:0;
 	}
 }
-/* Add to section to create a feautred header image */
-.single-post .article-body .libHeader {
-	margin-top:8em;
-	margin-bottom:8em;
-	text-align: center;
-} 
 /* Removes background image placed by featured image */
 .single-post main {
 	background-image:none;

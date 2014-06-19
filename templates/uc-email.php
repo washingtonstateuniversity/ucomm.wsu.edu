@@ -12,8 +12,9 @@
     <?php get_template_part('articles/article'); ?>
   </div><!--/column-->
   <section class="lib-work">
+    <h3>Library of work</h3>
     <?php 
-      $thumbnails = get_posts(array('posts_per_page' => 5,'tag' => 'email'));
+      $thumbnails = get_posts(array('posts_per_page' => 9,'tag' => 'email'));
       foreach ($thumbnails as $thumbnail) {
         if ( has_post_thumbnail($thumbnail->ID)) {
           echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';

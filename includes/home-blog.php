@@ -30,7 +30,7 @@ class home_blog {
 		?>
 <ul class="blog-loop">
 <?php
-$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'post_type' => 'post' );
+$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'post_type' => 'post','tag' => 'home' );
 
 $my_posts = new WP_Query( $args );
 
