@@ -2,7 +2,7 @@
 
 /* Template Name: UC-Blank */
 // Provides simply an unmodified <main> container
-
+// The uc-blank template is used on Photos + Video to meet full bleed of the unbound rebound.
 ?>
 
 <?php get_header(); ?>

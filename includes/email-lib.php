@@ -28,11 +28,12 @@ class email_lib {
 		// Build the output to return for use by the shortcode.
 		ob_start();
 		?>
-		<section class="row lib-work">
+		<section class="lib-work">
 			<div class="smallM">
 				<div class="metro">
 					<nav>
-						<?php
+						<ul>
+				        <?php
 						global $post;
 						$args = array( 'posts_per_page' => 12, 'tag' => 'email' );
 						$myposts = get_posts( $args);
@@ -46,13 +47,14 @@ class email_lib {
 								$thumb_url = false;
 							}
 							?>
-							<ul>
-								<li <?php if( $thumb_url ){ ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> ><ul class="label">
+								<li <?php if( $thumb_url ){ ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?>>
+									<ul class="label">
 									<h3><?php the_title(); ?></h3>
 									<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>"><ul class="label">
 										<li class="descripto"><?php the_excerpt(); ?></li> </ul></li>
+										<?php } ?>
 									</ul>
-									<?php } ?>
+									
 								</nav>
 							</div>
 						</div>
