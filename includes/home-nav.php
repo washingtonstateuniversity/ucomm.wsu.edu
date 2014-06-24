@@ -40,7 +40,7 @@ class home_nav {
         <h3>Email</h3>
         <li class="descripto">Email is the #1 activity on smartphones and tablets, according to Pew Research. University Communications writes and designs emails that captivate readers on the full range of devices.</li> </ul></a></li>
       <li class="printed"><a href="/print/"> <ul class="label">
-        <h3>Printed material</h3>
+        <h3>Print</h3>
         <li class="descripto">Want your print publications get noticed, read, and remembered? We’ll work with you to strategically plan print pieces that work hard to build awareness of your initiatives and shape audience attitudes.</li> </ul></a></li>
       <li class="presentations"><a href="/presentations/"> <ul class="label">
         <h3>Presentations</h3>
