@@ -1,0 +1,67 @@
+<?php
+/*
+Plugin Name: WSU UComm Call to Action
+Plugin URI: http://ucomm.wsu.edu/
+Description: Allows users to register for assets.
+Author: washingtonstateuniversity, jeremyfelt
+Author URI: http://web.wsu.edu/
+Version: 0.1.3
+License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+class email_lib {
+
+	/**
+	 * Setup the hooks.
+	 */
+	public function __construct() {
+
+		add_shortcode( 'email_lib',    array( $this, 'email_lib_display' ) );
+	}
+
+	/**
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function email_lib_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<section class="row lib-work">
+			<div class="smallM">
+				<div class="metro">
+					<nav>
+						<?php
+						global $post;
+						$args = array( 'posts_per_page' => 12, 'tag' => 'email' );
+						$myposts = get_posts( $args);
+						foreach( $myposts as $post ) {
+							setup_postdata($post);
+							$thumbnail_id = get_post_thumbnail_id( $post->ID );
+							$thumb_url = wp_get_attachment_image_src( $thumbnail_id );
+							if ( is_array( $thumb_url ) ) {
+								$thumb_url = $thumb_url[0];
+							} else {
+								$thumb_url = false;
+							}
+							?>
+							<ul>
+								<li <?php if( $thumb_url ){ ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> ><ul class="label">
+									<h3><?php the_title(); ?></h3>
+									<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>"><ul class="label">
+										<li class="descripto"><?php the_excerpt(); ?></li> </ul></li>
+									</ul>
+									<?php } ?>
+								</nav>
+							</div>
+						</div>
+					</section>
+					<?php
+					$content = ob_get_contents();
+					ob_end_clean();
+
+					return $content;
+				}
+			}
+			new email_lib();
