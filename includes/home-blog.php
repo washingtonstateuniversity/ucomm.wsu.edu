@@ -38,9 +38,6 @@ if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->t
 ?>
   <li class="nested-seperated">
    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-   <br/>
-   <span class="blog-meta">by <?php the_author(); ?></span>
-    <br/>
    <span class="blog-excerpt"><?php the_excerpt(); ?></span>
    <span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
   </li>
@@ -57,3 +54,6 @@ wp_reset_query();
 	}
 }
 new home_blog();
+/* HOLD
+   <span class="blog-meta">by <?php the_author(); ?></span>
+  */

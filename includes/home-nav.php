@@ -36,7 +36,7 @@ class home_nav {
       <li class="web"><a href="/web/"> <ul class="label">
         <h3>Web + social media</h3>
         <li class="descripto">University Communications creates compelling websites that deliver the messages you want and the information readers seek.</li> </ul></a></li>
-      <li class="email"><a href="/email/"> <ul class="label">
+        <li class="email"><a href="/email/"> <ul class="label">
         <h3>Email</h3>
         <li class="descripto">Email is the #1 activity on smartphones and tablets, according to Pew Research. University Communications writes and designs emails that captivate readers on the full range of devices.</li> </ul></a></li>
       <li class="printed"><a href="/print/"> <ul class="label">
@@ -45,9 +45,9 @@ class home_nav {
       <li class="presentations"><a href="/presentations/"> <ul class="label">
         <h3>Presentations</h3>
         <li class="descripto">Deliver your message with clarity and impact, while leveraging the strength of the <span class="addcrimson">WSU</span> brand.</li> </ul></a></li>
-      <li class="photo"><a href="/print/"> <ul class="label">
+      <li class="photo"><a href="/photos-video/"> <ul class="label">
         <h3>Photography + video</h3>
-        <li class="descripto">Want your print publications get noticed, read, and remembered? We’ll work with you to strategically plan print pieces that work hard to build awareness of your initiatives and shape audience attitudes.</li> </ul></a></li>
+        <li class="descripto">The work of University Communications photographers and videographers entertains and educates while advancing the WSU brand.</li> </ul></a></li>
     </ul>
   </nav>
 		<?php
