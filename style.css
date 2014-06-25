@@ -803,7 +803,8 @@ main .mainAccordion .ui-accordion-content ul {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-container iframe, .video-container object, .video-container embed, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 /* ***********************************************************************
 **************************************************************************
 
@@ -813,7 +814,7 @@ main .mainAccordion .ui-accordion-content ul {
 *********************************************************************** */
 main .blog-loop {
 	margin-top:2em;
-	width:100%;
+	width:98%;
 }
 main .blog-loop li {
 	list-style: none;
@@ -845,7 +846,7 @@ main .blog-excerpt {
 }
 main .blog-cattag {
 	display: block;
-	width:100%;
+	width:90%;
 	padding:.5em;
 	background-image:url('../images/elements/bg-fourty.png');
 	background-attachment: fixed;
@@ -1132,6 +1133,9 @@ main > .ucomm-bookmark .category, .comments {
 
 /* ### Homepage /
 *********************************************************************** */
+.home .ucomm-bookmark {
+	display:none;
+}
 .home .sky {
 	background: rgb(221,190,161);
 	background: -moz-linear-gradient(45deg,  rgba(221,190,161,1) 0%, rgba(215,178,88,1) 100%);
@@ -1145,14 +1149,12 @@ main > .ucomm-bookmark .category, .comments {
 	border-width: 0 0 25px 0;
 	border-color: rgba(237, 220, 204,0.3);
 	overflow: hidden;
-	padding: 0;
-	display:block;
-}
-.home .related {
-	margin-top:-3em;
+	padding-top: 1em;
+	padding-bottom:1em;
+	margin-bottom:2.5em;
+	text-align: center;
 }
 .home .sky h1 {
-	text-align: center;
 	font-size: 400%;
 	line-height: 1.3em;
 	font-style: normal;
@@ -1160,27 +1162,21 @@ main > .ucomm-bookmark .category, .comments {
 	color:white;
 	font-family: "OpenSans-CondLight";
 	letter-spacing: -1px;
-	padding-top:.2em;
 }
 .home .lead {
-	display: block;
-	margin:2em 2em 0 2em;
-}
-.home .callbox {
-	padding-bottom:6em;
+	margin-left:28px;
+	margin-right:28px;
 }
 
 /* ### Photos + Video /photos-video/
 *********************************************************************** */
-.page-id-354 .photography {
+.photography {
  	height:28em;
  	width:100%;
  	background-image: url("/wp-content/uploads/sites/3/2014/06/campusview.jpg");
  	background-size: 100% auto;
  	background-position:0% 25%;
  	background-repeat: no-repeat;
- 	margin-bottom:3em;
- 	margin-top:3em;
  }
 
  /* ***********************************************************************
@@ -1193,7 +1189,7 @@ main > .ucomm-bookmark .category, .comments {
 @media (min-width: 990px) { 
 	/* Home rebound column size for full width */
 	.home .sky .rebound .column {
-		width:990px;
+		width:1272px;
 	} 
 }
 @media (max-width: 990px) { 
