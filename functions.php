@@ -4,7 +4,6 @@ add_filter( 'spine_enable_builder_module', '__return_true' );
 
 include_once( 'includes/home-nav.php' ); // Include shortcode plugin.
 include_once( 'includes/home-blog.php' ); // Include shortcode plugin.
-include_once( 'includes/call-to-action.php' ); // Include shortcode plugin.
 include_once( 'includes/email-lib.php' ); // Include shortcode plugin.
 include_once( 'includes/presentation-lib.php' ); // Include shortcode plugin.
 include_once( 'includes/print-lib.php' ); // Include shortcode plugin.
