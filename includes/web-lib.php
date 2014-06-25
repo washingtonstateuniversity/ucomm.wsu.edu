@@ -29,19 +29,30 @@ class web_lib {
 		ob_start();
 		?>
 
-<section class="row lib-work">
-    <?php 
-      $thumbnails = get_posts(array('posts_per_page' => 9,'tag' => 'web'));
-      foreach ($thumbnails as $thumbnail) {
-        if ( has_post_thumbnail($thumbnail->ID)) {
-          echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
-          echo get_the_post_thumbnail($thumbnail->ID, 'thumbnail');
-          echo '</a>';
-        }
-      }
-    ?>
-  </section>  
-
+		<nav>
+			<ul>
+				<?php
+					global $post;
+					$args = array( 'posts_per_page' => 12, 'tag' => 'web' );
+					$myposts = get_posts( $args);
+					foreach( $myposts as $post ) {
+							setup_postdata($post);
+							$thumbnail_id = get_post_thumbnail_id( $post->ID );
+							$thumb_url = wp_get_attachment_image_src( $thumbnail_id );
+							if ( is_array( $thumb_url ) ) {
+								$thumb_url = $thumb_url[0];
+							} else {
+								$thumb_url = false;
+							}
+							?>
+							<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> >
+								<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
+									<h3><?php the_title(); ?></h3>
+								</a>
+							</li>
+				<?php } ?>
+			</ul>								
+		</nav>
 		<?php
 		$content = ob_get_contents();
 		ob_end_clean();

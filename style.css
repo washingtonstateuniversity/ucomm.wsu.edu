@@ -154,7 +154,11 @@ main .site .addGray {
 	font-style: italic;
 	text-transform: none;
 	letter-spacing: 1px;
-
+}
+.pgbldrhead {
+	margin-left:28px;
+	margin-right:28px;
+	margin-bottom:0;
 }
 /* Before binder Accent parts/before-binder.php */
 .acBanner {
@@ -269,6 +273,8 @@ main h6+p {
 	font-size: 1.6em;
 	line-height: 1.6em;
 	letter-spacing: 0;
+	padding-bottom:1em;
+	display:block;
 }
 /* Add to a span or a p tag to include crimon text */
 .addcrimson {
@@ -734,9 +740,6 @@ main .mainAccordion .ui-accordion-content ul {
 	float:left;
 	padding-right:1%;
 }
-.lib-work {
-	padding:2em;
-}
 #fixedSide .fixed {
 	width:320px;
 }
@@ -762,10 +765,6 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-bottom: 0;
 	line-height: 1.3em;
 }
-.page-template-templatesuc-side-right-php .two {
-	margin-top:11em;
-}
-
 /* ***********************************************************************
 **************************************************************************
 
@@ -1065,9 +1064,6 @@ main > .ucomm-bookmark .category, .comments {
 .smallM .metro {
 	margin-bottom:1.2em;
 }
-.smallM .metro li {
-	background-repeat:no-repeat;
-}
 .smallM .metro ul li a:hover {
 	background-color: rgba(211, 225, 227,0.5 );
 }
@@ -1092,13 +1088,40 @@ main > .ucomm-bookmark .category, .comments {
 .smallM .metro ul li a:hover .label, .smallM .metro ul li a:focus .label {
 	top:160px;
 }
-.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .smallM .metro .photo  {
+.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .smallM .metro .photo {
 	height:200px;
 	width:19.5%;
 	background-size: 200px auto;
 	background-position: top center;
 }
-
+.lib-work {
+	margin-top:0;
+}
+.lib-work ul {
+	text-align: center;
+}
+.lib-work h2 {
+	padding-bottom:1em;
+	padding-top:0;
+}
+.smallM  .lib {
+	height:200px;
+	width:200px;
+	background-position: top center;
+}
+.smallM .metro ul .lib a h3 {
+	font-size: 1.1em;
+	margin-top:138px;
+	padding-left:10px;
+	padding-bottom:5px;
+	position: relative;
+	border-bottom: none;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-style: normal;
+	background-color:rgba(245,245,245,0.8);
+	display:block;
+	height:50px;
+}
 /* ***********************************************************************
 **************************************************************************
 
@@ -1205,7 +1228,7 @@ main > .ucomm-bookmark .category, .comments {
 	.smallM .metro ul li a:hover .label {
 		top:100px;
 	}
-	.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .metro .photo  {
+	.smallM .metro .metroTitle, .smallM .metro .web, .smallM .metro .email,.smallM .metro .printed, .smallM .metro .presentations, .metro .photo, .smallM .metro .lib  {
 		height:150px;
 		width:100%;
 		background-size: 100% auto;
@@ -1214,13 +1237,18 @@ main > .ucomm-bookmark .category, .comments {
 	.smallM .metro ul li a:hover {
 		background-color: transparent;
 	} 
+	.smallM .metro ul .lib a h3 {
+	font-size: 1em;
+	margin-top:100px;
+	height:40px;
+}
 	/* Helper elements assistance */
-	main .nested-one {
+	.nested-one {
 		display: block;
 		width:100%;
 		clear:both;
 	}
-	main .nested-two {
+	.nested-two {
 		display: block;
 		width:100%;
 		clear:both;
@@ -1236,10 +1264,10 @@ main > .ucomm-bookmark .category, .comments {
 		top:0;
 	}
 	/* Blog and single posts */
-	main .blog-loop li:before { 
+	.blog-loop li:before { 
 		content: none;
 	}
-	main .blog-loop {
+	.blog-loop {
 		margin-left:0;
 	}
 	/* Page specific targeting */

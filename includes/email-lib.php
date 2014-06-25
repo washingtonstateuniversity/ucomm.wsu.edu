@@ -28,9 +28,7 @@ class email_lib {
 		// Build the output to return for use by the shortcode.
 		ob_start();
 		?>
-		<section class="lib-work">
-			<div class="smallM">
-				<div class="metro">
+
 					<nav>
 						<ul>
 				        <?php
@@ -47,18 +45,15 @@ class email_lib {
 								$thumb_url = false;
 							}
 							?>
-								<li <?php if( $thumb_url ){ ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?>>
-									<ul class="label">
+							<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> >
+								<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
 									<h3><?php the_title(); ?></h3>
-									<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>"><ul class="label">
-										<li class="descripto"><?php the_excerpt(); ?></li> </ul></li>
-										<?php } ?>
-									</ul>
-									
-								</nav>
-							</div>
-						</div>
-					</section>
+								</a>
+							</li>
+						<?php } ?>
+						</ul>								
+					</nav>
+		
 					<?php
 					$content = ob_get_contents();
 					ob_end_clean();
