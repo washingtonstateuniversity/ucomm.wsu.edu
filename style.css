@@ -104,7 +104,7 @@ main {
 **************************************************************************
 *********************************************************************** */
 main .ucomm-bookmark  {
-	margin-bottom:0em;
+	margin-bottom:3em;
 	display: block;
 	position: relative;
 	top: 20px;
@@ -138,7 +138,7 @@ main .site .addGray {
 }
 /* Styles page titles through out the site PAGES */
 .article-header {
-	display:block;
+	
 	vertical-align: text-bottom;
 	height:40px;
 	padding-top:3.4em;
@@ -146,7 +146,7 @@ main .site .addGray {
 	border-style:solid;
 	border-color:#464e54;
 	border-width:0px 0px 1px 0px;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 	position:relative;
 }
 .article-header h1  {
@@ -229,11 +229,11 @@ main h4 {
 	margin-bottom: .675em;
 }
 /* Creates vertical bottom space on h tags under headers for centering */
-main article header .center {
+main header .center {
 	padding-bottom:1.4em;
 }
 /* Add to a <header> tag to create an inline heading */
-main .inline {
+.inline {
 	float:left;
 	margin-top:.4em;
 	margin-right:.4em;
@@ -270,11 +270,12 @@ main h6+p {
 ******************************* */
 /* Styling of the paragraphs that follow the main header for introduction style */
 .lead {
+	display:block;
 	font-size: 1.6em;
 	line-height: 1.6em;
 	letter-spacing: 0;
 	padding-bottom:1em;
-	display:block;
+	padding-top:1em;
 }
 /* Add to a span or a p tag to include crimon text */
 .addcrimson {
@@ -786,10 +787,10 @@ main .mainAccordion .ui-accordion-content ul {
 .padbottom {
 	padding-bottom:1.6em;
 }
-.related article {
+.related {
 	padding-bottom:0;
 }
-.related + section article {
+.related + section  {
 	margin-top:-1em;
 	padding-top:0;
 }
@@ -1177,6 +1178,7 @@ main > .ucomm-bookmark .category, .comments {
  	background-size: 100% auto;
  	background-position:0% 25%;
  	background-repeat: no-repeat;
+ 	margin-top:-3em;
  }
 
  /* ***********************************************************************
