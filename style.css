@@ -172,10 +172,8 @@ main .site .addGray {
 	background: linear-gradient(45deg, rgba(198,12,48,1) 0%,rgba(152,30,50,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#981e32',GradientType=1 );
 }
-.single .column {
-	margin-left:14px;
-	margin-right:14px;
-}
+
+
 /* ***********************************************************************
 **************************************************************************
 
