@@ -88,7 +88,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 body {
-	background-image:url('/wp-content/uploads/sites/3/2014/06/bg.png');
+	background-image:url('/wp-content/uploads/sites/61/2014/06/bg.png');
 	background-attachment: fixed;
 }
 main {
@@ -441,7 +441,7 @@ main sup {
 /* ### Aside
 *********************************************************************** */
 main aside {
-	background-image:url('/wp-content/uploads/sites/3/2014/06/bg-fourty.png');
+	background-image:url('/wp-content/uploads/sites/61/2014/06/bg-fourty.png');
 	background-attachment: fixed;
 	background-color: #eddccc;
 	padding:2em;
@@ -1020,19 +1020,19 @@ main > .ucomm-bookmark .category, .comments {
 	background-repeat: no-repeat;
 }
 .metro .web {
-	background-image: url("/wp-content/uploads/sites/3/2014/06/webhome.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/06/webhome.jpg");
 }
 .metro .email {
-	background-image: url("/wp-content/uploads/sites/3/2014/06/metro-email.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/06/metro-email.jpg");
 }
 .metro .printed {
-	background-image: url("/wp-content/uploads/sites/3/2014/06/twentyfourteenimaginetomorrowzoom.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/06/twentyfourteenimaginetomorrowzoom.jpg");
 }
 .metro .presentations {
-	background-image: url("/wp-content/uploads/sites/3/2014/06/presentation.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/06/presentation.jpg");
 }
 .metro .photo {
-	background-image: url("/wp-content/uploads/sites/3/2014/06/metro-photo.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/06/metro-photo.jpg");
 }
 /* Creates a smaller version of the metro navigation for inside pages */
 .smallm .metro {
@@ -1139,7 +1139,7 @@ main > .ucomm-bookmark .category, .comments {
 	margin-right:28px;
 }
 .home .announce {
-	background: url('/wp-content/uploads/sites/3/2014/06/announcement.jpg');
+	background: url('/wp-content/uploads/sites/61/2014/06/announcement.jpg');
 	background-size:100% auto;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -1155,7 +1155,7 @@ main > .ucomm-bookmark .category, .comments {
 .photography {
  	height:28em;
  	width:100%;
- 	background-image: url("/wp-content/uploads/sites/3/2014/06/campusview.jpg");
+ 	background-image: url("/wp-content/uploads/sites/61/2014/06/campusview.jpg");
  	background-size: 100% auto;
  	background-position:0% 25%;
  	background-repeat: no-repeat;
