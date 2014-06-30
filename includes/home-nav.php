@@ -47,7 +47,7 @@ class home_nav {
         <li class="descripto">Deliver your message with clarity and impact, while leveraging the strength of the <span class="addcrimson">WSU</span> brand.</li> </ul></a></li>
       <li class="photo"><a href="/photos-video/"> <ul class="label">
         <h3>Photography + video</h3>
-        <li class="descripto">The work of University Communications photographers and videographers entertains and educates while advancing the WSU brand.</li> </ul></a></li>
+        <li class="descripto">The work of University Communications photographers and videographers entertains and educates while advancing the <span class="addcrimson">WSU</span> brand.</li> </ul></a></li>
     </ul>
   </nav>
 		<?php
