@@ -906,6 +906,7 @@ main > .ucomm-bookmark .category, .comments {
 	padding-left:3em;
 	padding-right:3em;
 	padding-top:5em;
+	margin-top:2.5em;
 	width:850px;
 }
 
@@ -1074,23 +1075,24 @@ main > .ucomm-bookmark .category, .comments {
 	padding-bottom:1em;
 	padding-top:0;
 }
-.smallm  .lib {
+.smallm .lib {
 	height:200px;
 	width:200px;
 	background-position: top center;
 }
 .smallm .metro ul .lib a h3 {
-	font-size: 1.1em;
 	margin-top:138px;
 	padding-left:10px;
 	padding-bottom:5px;
 	position: relative;
-	border-bottom: none;
-	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-	font-style: normal;
 	background-color:rgba(245,245,245,0.8);
 	display:block;
 	height:50px;
+	font-size: 1.1em;
+	border-bottom: none;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-style: normal;
+	text-transform:none;
 }
 /* ***********************************************************************
 **************************************************************************
