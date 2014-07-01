@@ -931,7 +931,8 @@ main > .ucomm-bookmark .category, .comments {
 	padding:0 !important;
 }
 .metro ul li {
-	display:inline-block;
+	display:block;
+	float:left;
 	padding:0;
 	/*margin reset */
 	margin:0;
