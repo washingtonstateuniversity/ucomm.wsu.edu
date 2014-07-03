@@ -209,15 +209,14 @@ main h1, h2, h3, h4, h5, h6 {
 	text-transform: lowercase;
 	letter-spacing: 0;
 }
-main h1 {
+main h1, main h2, main h3 {
 	color:#262b2e;
 }
 main h2 {
 	font-size:2em;
 	margin-top: .475em;
 	margin-bottom: .475em !important;
-	color:#262b2e;
-}
+	}
 main h3 {
 	margin-top:1em;
 }
