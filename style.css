@@ -142,10 +142,7 @@ main .site .addGray {
 	height:40px;
 	padding-top:3.4em;
 	margin-bottom:3em;
-	border-style:solid;
-	border-color:#464e54;
-	border-width:0px 0px 1px 0px;
-	padding-bottom: 2em;
+		padding-bottom: 2em;
 	position:relative;
 }
 .article-header h1  {
@@ -153,6 +150,9 @@ main .site .addGray {
 	font-style: italic;
 	text-transform: none;
 	letter-spacing: 1px;
+	border-style:solid;
+	border-color:#464e54;
+	border-width:0px 0px 1px 0px;
 }
 .pgbldrhead {
 	margin-left:28px;
