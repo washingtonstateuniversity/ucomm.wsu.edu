@@ -896,7 +896,7 @@ main > .ucomm-bookmark .category, .comments {
 	font-size: 40%;
 }
 .single-post .article-header hgroup.source {
-	text-transform: none;
+	display:none;
 }
 .single-post .ucomm-bookmark .post {
 	display:none;
