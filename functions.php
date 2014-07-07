@@ -35,4 +35,36 @@ function alx_embed_html( $html ) {
 }
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
-?>
+
+add_filter( 'tablepress_datatables_parameters', 'spine_params', 10, 4 );
+/**
+ * Filter Tablepress's call of the Datatables plugin to add an "All" option for viewing
+ * a specified number of entries.
+ *
+ * @param $parameters
+ * @param $table_id
+ * @param $html_id
+ * @param $js_options
+ *
+ * @return mixed
+ */
+function spine_params( $parameters, $table_id, $html_id, $js_options ) {
+	if ( true === $js_options['datatables_lengthchange'] ) {
+		$lengths = array(
+			10 => 10,
+			25 => 25,
+			50 => 50,
+			100 => 100
+		);
+
+		if ( false === array_key_exists( $js_options['datatables_paginate_entries'], $lengths ) ) {
+			$lengths[ absint( $js_options['datatables_paginate_entries'] ) ] = absint( $js_options['datatables_paginate_entries'] );
+			ksort( $lengths );
+			$lengths['-1'] = '"All"';
+		}
+
+		$parameters['aLengthMenu'] = '"aLengthMenu":[[' . implode( ',', array_keys( $lengths ) ) . '],[' . implode( ',', array_values( $lengths ) ) . ']]';
+	}
+
+	return $parameters;
+}
