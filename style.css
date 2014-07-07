@@ -587,7 +587,15 @@ main footer a:hover {
 .dataTables_filter {
 	margin-bottom:.8em;
 }
-
+.paginate_disabled_next:after, .paginate_disabled_previous:before, .paginate_enabled_next:after, .paginate_enabled_previous:before {
+	text-shadow:none;
+	font-weight:400;
+	color:#4F868E;
+}
+.dataTables_paginate a {
+	color:#4F868E;
+	text-decoration: none;
+}
 /* ### Forms
 *********************************************************************** */
 /* .gform_body {
