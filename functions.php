@@ -60,8 +60,9 @@ function spine_params( $parameters, $table_id, $html_id, $js_options ) {
 		if ( false === array_key_exists( $js_options['datatables_paginate_entries'], $lengths ) ) {
 			$lengths[ absint( $js_options['datatables_paginate_entries'] ) ] = absint( $js_options['datatables_paginate_entries'] );
 			ksort( $lengths );
-			$lengths['-1'] = '"All"';
 		}
+
+		$lengths['-1'] = '"All"';
 
 		$parameters['aLengthMenu'] = '"aLengthMenu":[[' . implode( ',', array_keys( $lengths ) ) . '],[' . implode( ',', array_values( $lengths ) ) . ']]';
 	}
