@@ -11,6 +11,11 @@ include_once( 'includes/web-lib.php' ); // Include shortcode plugin.
 include_once( 'includes/research-lib.php' ); // Include shortcode plugin.
 include_once( 'includes/cta.php' ); // Include shortcode plugin.
 
+add_action( 'wp_enqueue_scripts', 'ucomm_enqueue_scripts' );
+function ucomm_enqueue_scripts() {
+	wp_enqueue_script( 'ucomm-library-modal', get_stylesheet_directory_uri() . '/assets/scripts/site.js', array( 'jquery' ), spine_get_script_version(), true );
+}
+
 function custom_excerpt_length( $length ) {
 	return 20;
 }
