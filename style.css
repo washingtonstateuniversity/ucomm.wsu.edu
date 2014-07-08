@@ -142,7 +142,7 @@ main .site .addGray {
 	height:40px;
 	padding-top:3.4em;
 	margin-bottom:3em;
-		padding-bottom: 2em;
+	padding-bottom: 2em;
 	position:relative;
 }
 .article-header h1  {
@@ -601,7 +601,10 @@ main footer a:hover {
 /* .gform_body {
 
 } */
-
+.orders a {
+	white-space: normal; /* css-3 */        
+    word-wrap: normal; /* Internet Explorer 5.5+ */
+}
 /* ### Seperators
 *********************************************************************** */
 main hr {
