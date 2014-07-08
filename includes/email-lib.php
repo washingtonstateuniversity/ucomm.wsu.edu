@@ -46,14 +46,13 @@ class email_lib {
 							}
 							?>
 							<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> >
-								<a href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
+								<a class="modal" data-post-id="<?php echo $post->ID; ?>" href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
 									<h3><?php the_title(); ?></h3>
 								</a>
 							</li>
 						<?php } ?>
 						</ul>								
 					</nav>
-		
 					<?php
 					$content = ob_get_contents();
 					ob_end_clean();
