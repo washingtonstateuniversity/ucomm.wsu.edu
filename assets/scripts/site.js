@@ -1,7 +1,7 @@
 (function($){
 
 	function display_modal_data( data ) {
-		var html = '<div class="content-modal"><div class="content-modal-content">' +
+		var html = '<div class="content-modal"><div class="content-modal-content"><div class="content-modal-close">Close</div>' +
 			'<section class="row single"><div class="column one">' +
 			'<article><header class="article-header"><h1 class="article-title">' +
 			data.title +

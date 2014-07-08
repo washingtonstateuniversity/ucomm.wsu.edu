@@ -1411,3 +1411,11 @@ main > .ucomm-bookmark .category, .comments {
 	width: 800px;
 	margin: 100px auto 0 auto;
 }
+
+.content-modal-close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-decoration: underline;
+	cursor: pointer;
+}
