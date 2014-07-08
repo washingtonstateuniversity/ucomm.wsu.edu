@@ -1392,3 +1392,22 @@ main > .ucomm-bookmark .category, .comments {
 		padding-right:0;
 	}
 }
+
+.content-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50,50,50, .90);
+	z-index: 99166;
+	overflow:auto;
+}
+
+.content-modal-content {
+	position: relative;
+	background: rgba( 255, 255, 255, 1 );
+	padding: 20px;
+	width: 800px;
+	margin: 100px auto 0 auto;
+}
