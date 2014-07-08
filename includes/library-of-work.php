@@ -1,39 +1,38 @@
 <?php
-/*
-Plugin Name: WSU UComm Call to Action
-Plugin URI: http://ucomm.wsu.edu/
-Description: Allows users to register for assets.
-Author: washingtonstateuniversity, jeremyfelt
-Author URI: http://web.wsu.edu/
-Version: 0.1.3
-License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-*/
-
-class email_lib {
+/**
+ * Class UComm_Library_Of_Work
+ */
+class UComm_Library_Of_Work {
 
 	/**
 	 * Setup the hooks.
 	 */
 	public function __construct() {
-
-		add_shortcode( 'email_lib',    array( $this, 'email_lib_display' ) );
+		add_shortcode( 'ucomm_library', array( $this, 'display_library' ) );
 	}
 
 	/**
-	 * Handle the display of the svg_ shortcode.
+	 * Display output for the library of work shortcode.
+	 *
+	 * @param array $atts Attributes passed with the shortcode.
 	 *
 	 * @return string HTML output
 	 */
-	public function email_lib_display() {
+	public function display_library( $atts ) {
+		// Look for a tag, use email by default.
+		$atts = shortcode_atts( array( 'tag' => 'email' ), $atts );
+
+		// Make sure it looks like a slug.
+		$atts['tag'] = sanitize_key( $atts['tag'] );
+
 		// Build the output to return for use by the shortcode.
 		ob_start();
 		?>
-
 					<nav class="library-nav">
 						<ul>
 				        <?php
 						global $post;
-						$args = array( 'posts_per_page' => 12, 'tag' => 'email' );
+						$args = array( 'posts_per_page' => 12, 'tag' => $atts['tag'] );
 						$myposts = get_posts( $args);
 						foreach( $myposts as $post ) {
 							setup_postdata($post);
@@ -53,11 +52,11 @@ class email_lib {
 						<?php } ?>
 						</ul>								
 					</nav>
-					<?php
-					$content = ob_get_contents();
-					ob_end_clean();
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
 
-					return $content;
-				}
-			}
-			new email_lib();
+		return $content;
+	}
+}
+new UComm_Library_Of_Work();
