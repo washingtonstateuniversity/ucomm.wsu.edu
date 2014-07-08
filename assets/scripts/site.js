@@ -9,7 +9,7 @@
 			data.content +
 			'</div></article>' +
 			'</div></section></div></div>';
-		$('body' ).append(html);
+		$('main' ).append(html);
 		$('.content-modal-close' ).on('click', function(e) {
 			$('.content-modal' ).remove();
 		});
