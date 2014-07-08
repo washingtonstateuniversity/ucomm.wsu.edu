@@ -29,7 +29,7 @@ class email_lib {
 		ob_start();
 		?>
 
-					<nav>
+					<nav class="library-nav">
 						<ul>
 				        <?php
 						global $post;
