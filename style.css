@@ -703,9 +703,10 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-bottom:0;
 }
 /* ### Fixing elements to top on scroll
-*********************************************************************** */
-/* fixme {} */
-
+*********************************************************************** 
+.fixme {
+}
+*/
 /* ***********************************************************************
 **************************************************************************
 
@@ -764,7 +765,7 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-right:1%;
 }
 #fixedSide .fixed {
-	width:320px;
+	width:20%;
 }
 #fixedSide h6 {
 	margin-bottom:1em;
@@ -916,6 +917,55 @@ main > .ucomm-bookmark .category, .comments {
 	margin-top:2.5em;
 	width:850px;
 }
+
+/* ***********************************************************************
+**************************************************************************
+
+## Call to action
+
+**************************************************************************
+*********************************************************************** */
+.callbox {
+	text-align: center;
+}
+.call {
+	font-size: 1.2em;
+	background-color: rgba(152, 30, 50,1);
+	color:#f5f5f5;
+	text-transform: uppercase;
+	padding-top:20px;
+	padding-bottom:20px;
+	border:none;
+	padding:1em;
+	display:inline-block;
+	margin-top:2.5em;
+	margin-bottom:1em;
+}
+.call .ss-icon {
+	font-size: 1.2em;
+	vertical-align: middle;
+	margin-right:.5em;
+}
+.call:hover {
+	background-color: #c60c30;
+	color:#f5f5f5;
+	border:none;
+}
+.fixed .call {
+	font-size: 1.4em;
+	top: 90px;
+	right:-435px;
+	position:fixed;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.fixed .call:hover {
+	right:0;
+}
+
+
 
 /* ***********************************************************************
 **************************************************************************
@@ -1221,6 +1271,7 @@ main > .ucomm-bookmark .category, .comments {
 		width:100%;
 		background-size: 100% auto;
 		background-position: top left;
+		background-repeat:no-repeat;
 	}
 	.smallm .metro ul li a:hover {
 		background-color: transparent;
