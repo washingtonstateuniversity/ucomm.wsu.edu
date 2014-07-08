@@ -6,6 +6,7 @@ include_once( 'includes/home-nav.php' ); // Include shortcode plugin.
 include_once( 'includes/home-blog.php' ); // Include shortcode plugin.
 include_once( 'includes/library-of-work.php' ); // Handles library of work shortcode
 include_once( 'includes/cta.php' ); // Include shortcode plugin.
+include_once( 'includes/web-template.php' );
 
 add_action( 'wp_enqueue_scripts', 'ucomm_enqueue_scripts' );
 function ucomm_enqueue_scripts() {
