@@ -10,9 +10,8 @@
 
 	function pull_modal_data(e) {
 		e.preventDefault();
-
 		var post_id = $(this).attr('data-post-id');
-		var post_url = window.location.protocol + '//' + window.location.hostname + '/wp-json/posts/' + post_id;
+		var post_url = window.UComm_Data.json_api_url + 'posts/' + post_id;
 		$.getJSON( post_url, display_modal_data );
 	}
 

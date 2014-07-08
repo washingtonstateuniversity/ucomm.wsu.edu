@@ -9,7 +9,9 @@ include_once( 'includes/cta.php' ); // Include shortcode plugin.
 
 add_action( 'wp_enqueue_scripts', 'ucomm_enqueue_scripts' );
 function ucomm_enqueue_scripts() {
-	wp_enqueue_script( 'ucomm-library-modal', get_stylesheet_directory_uri() . '/assets/scripts/site.js', array( 'jquery' ), spine_get_script_version(), true );
+	wp_register_script( 'ucomm-library-modal', get_stylesheet_directory_uri() . '/assets/scripts/site.js', array( 'jquery' ), spine_get_script_version(), true );
+	wp_localize_script( 'ucomm-library-modal', 'UComm_Data', array( 'json_api_url' => get_home_url( get_current_blog_id(), '/wp-json/' ) ) );
+	wp_enqueue_script( 'ucomm-library-modal' );
 }
 
 function custom_excerpt_length( $length ) {
