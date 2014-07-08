@@ -1,18 +1,36 @@
 <?php
-
+/**
+ * Class WSUWP_Web_Template
+ */
 class WSUWP_Web_Template {
 
+	/**
+	 * @var string The desired text to be prepended to the html TITLE element.
+	 */
 	var $html_title = 'University Communications';
 
+	/**
+	 * Add hooks.
+	 */
 	public function __construct() {
 		add_filter( 'wp_title', array( $this, 'set_html_title' ) );
 		add_action( 'template_redirect', array( $this, 'handle_template_request' ) );
 	}
 
+	/**
+	 * Title text to prepend in the header of the HTML.
+	 *
+	 * @return string Modified title text.
+	 */
 	public function set_html_title() {
 		return esc_html( $this->html_title . ' | ' );
 	}
 
+	/**
+	 * Look for and handle any requests made to the `/web-template/` URL so that a JSON object containing
+	 * the two parts of the template can be returned. We force the resonse to 200 OK and die as soon as
+	 * the JSON is output.
+	 */
 	public function handle_template_request() {
 		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/web-template/' ) ) {
 			if ( isset( $_GET['html_title'] ) ) {
@@ -29,6 +47,11 @@ class WSUWP_Web_Template {
 		}
 	}
 
+	/**
+	 * Build the HTML to be displayed before any additional content is added by the requesting page.
+	 *
+	 * @return string HTML content.
+	 */
 	private function build_pre_content() {
 		ob_start();
 
@@ -54,6 +77,11 @@ class WSUWP_Web_Template {
 		return $content;
 	}
 
+	/**
+	 * Build the HTML to be displayed after any additional content is added by the requesting page.
+	 *
+	 * @return string HTML content.
+	 */
 	private function build_post_content() {
 		ob_start();
 		?>
