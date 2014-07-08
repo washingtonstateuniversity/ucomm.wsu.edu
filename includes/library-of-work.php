@@ -28,7 +28,7 @@ class UComm_Library_Of_Work {
 		// Build the output to return for use by the shortcode.
 		ob_start();
 		?>
-		<nav class="library-nav">
+		<nav class="library-nav library-<?php echo esc_attr( $atts['tag'] ); ?>">
 			<ul>
 			<?php
 			global $post;
