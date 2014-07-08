@@ -1,12 +1,24 @@
 <?php
 
 class WSUWP_Web_Template {
+
+	var $html_title = 'University Communications';
+
 	public function __construct() {
+		add_filter( 'wp_title', array( $this, 'set_html_title' ) );
 		add_action( 'template_redirect', array( $this, 'handle_template_request' ) );
+	}
+
+	public function set_html_title() {
+		return esc_html( $this->html_title . ' | ' );
 	}
 
 	public function handle_template_request() {
 		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/web-template/' ) ) {
+			if ( isset( $_GET['html_title'] ) ) {
+				$this->html_title = $_GET['html_title'];
+			}
+
 			$pre = $this->build_pre_content();
 			$post = $this->build_post_content();
 
