@@ -337,7 +337,7 @@ main p+ol {
 }
 /* ### Links
 *********************************************************************** */
-main a {
+main a, .content-modal-close {
 	border-bottom:1px solid #4F868E;
 	color: #4F868E;
 	white-space: pre-wrap; /* css-3 */    
@@ -346,7 +346,7 @@ main a {
     white-space: -o-pre-wrap; /* Opera 7 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
-main a:hover, main a:focus {
+main a:hover, main a:focus, .content-modal-close:hover, .content-modal-close:focus {
 	border-bottom:1px solid #193838;
 	background-color:#d3e1e3;
 	color: #193838;
@@ -951,7 +951,6 @@ main > .ucomm-bookmark .category, .comments {
 	top: 5px;
 	right: 5px;
 	cursor: pointer;
-	color: #4F868E;
 	font-size: 1.4em;
 }
 
