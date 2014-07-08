@@ -1,10 +1,14 @@
 (function($){
 
 	function display_modal_data( data ) {
-		var html = '<div class="content-modal">';
-		html += '<h1>' + data.title + '</h1>';
-		html += data.content;
-		html += '</div>';
+		var html = '<div class="content-modal">' +
+			'<section class="row single"><div class="column one">' +
+			'<article><header class="article-header"><h1 class="article-title">' +
+			data.title +
+			'</h1></header><div class="article-body">' +
+			data.content +
+			'</div></article>' +
+			'</div></section></div>';
 		$('body' ).append(html);
 	}
 
