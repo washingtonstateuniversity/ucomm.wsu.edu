@@ -774,7 +774,7 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-bottom:0;
 }
 #fixedSide ol li, #fixedSide ul li {
-	font-size: 88%;
+	font-size: 92%;
 	line-height: 1.4em;
 	margin-bottom:4px;
 	padding-bottom: 0;
@@ -917,7 +917,26 @@ main > .ucomm-bookmark .category, .comments {
 	margin-top:2.5em;
 	width:850px;
 }
-
+.content-modal {
+	background-color:#f5f5f5;
+}
+.content-modal .article-header {
+	margin-bottom:3em;
+}
+.content-modal a {
+	border-bottom:1px solid #4F868E;
+	color: #4F868E;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+.content-modal-close a {
+	border-bottom:none;
+	color: #4F868E;
+	font-size: 1.4em;
+}
 /* ***********************************************************************
 **************************************************************************
 
@@ -953,6 +972,9 @@ main > .ucomm-bookmark .category, .comments {
 }
 .fixed .call {
 	font-size: 1.4em;
+}
+/*.fixed .call {
+	font-size: 1.4em;
 	top: 90px;
 	right:-435px;
 	position:fixed;
@@ -963,7 +985,7 @@ main > .ucomm-bookmark .category, .comments {
 }
 .fixed .call:hover {
 	right:0;
-}
+}*/
 
 
 
