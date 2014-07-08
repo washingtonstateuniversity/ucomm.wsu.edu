@@ -12,7 +12,7 @@
 		e.preventDefault();
 
 		var post_id = $(this).attr('data-post-id');
-		var post_url = 'http://wp.wsu.dev/wp-json/posts/' + post_id;
+		var post_url = window.location.protocol + '//' + window.location.hostname + '/wp-json/posts/' + post_id;
 		$.getJSON( post_url, display_modal_data );
 	}
 
