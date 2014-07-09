@@ -1015,24 +1015,6 @@ main .mainAccordion .ui-accordion-content ul {
 	color:#f5f5f5;
 	border:none;
 }
-.fixed .call {
-	font-size: 1.4em;
-}
-/*.fixed .call {
-	font-size: 1.4em;
-	top: 90px;
-	right:-435px;
-	position:fixed;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-.fixed .call:hover {
-	right:0;
-}*/
-
-
 
 /* ***********************************************************************
 **************************************************************************
