@@ -955,6 +955,7 @@ main > .ucomm-bookmark .category, .comments {
 	right: 5px;
 	cursor: pointer;
 	font-size: 1.4em;
+	border-bottom:none;
 }
 
 /* ***********************************************************************
@@ -1020,11 +1021,6 @@ main > .ucomm-bookmark .category, .comments {
 	margin:0;
 	padding:0;
 }
-.metro hr {
-	margin-top:6em;
-	margin-left:2em;
-	margin-right:2em;
-}
 .metro ul {
 	margin:5px auto auto 5px;
 	padding:0 !important;
@@ -1053,10 +1049,8 @@ main > .ucomm-bookmark .category, .comments {
 	height: 100%;
 }
 .metro ul li a .label {
-	display:block;
 	width:100%;
 	height:488px;
-	padding-top:40px;
 	position:absolute;
 	top:412px;
 	background-color:rgba(245,245,245,1);
@@ -1167,6 +1161,7 @@ main > .ucomm-bookmark .category, .comments {
 	width:19.5%;
 	background-size: 200px auto;
 	background-position: top center;
+	background-repeat:no-repeat;
 }
 .lib-work .column{
 	margin-top:0;
@@ -1308,7 +1303,7 @@ main > .ucomm-bookmark .category, .comments {
 	.smallm .metro ul li a:hover .label {
 		top:100px;
 	}
-	.smallm .metro .metroTitle, .smallm .metro .web, .smallm .metro .email,.smallm .metro .printed, .smallm .metro .presentations, .metro .photo, .smallm .metro .lib  {
+	.smallm .metro .metroTitle, .smallm .metro .web, .smallm .metro .email,.smallm .metro .printed, .smallm .metro .presentations, .smallm .metro .photo, .smallm .metro .lib  {
 		height:150px;
 		width:100%;
 		background-size: 100% auto;
@@ -1362,9 +1357,9 @@ main > .ucomm-bookmark .category, .comments {
 	}
 	.home .metro .metroTitle, .home .metro .web, .home .metro .email, .home .metro .printed, .home .metro .presentations, .home .metro .photo {
 		width:100%;
-		height: 388px;
+		height: 400px;
 		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-size: 100% auto !important;
 	}
 	.home .metro ul li a .label {
 		top:155px;
