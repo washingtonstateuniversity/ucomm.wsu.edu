@@ -28,8 +28,6 @@ if ( ! empty( $position ) ) {
 				
 			<?php get_template_part( 'articles/post' ) ?>
 
-			<?php // get_comments( ); ?>
-
 		<?php endwhile; ?>
 		
 		</div> <!--/column-->
