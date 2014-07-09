@@ -458,6 +458,7 @@ main aside h4 {
 main aside ul {
 	margin-bottom:0;
 	margin-left:0;
+	font-size: 90%;
 }
 /* Create a smaller aside for side content */
 main .asism {
@@ -890,6 +891,15 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .source {
 	display:none;
+}
+.category a {
+	text-decoration: none;
+}
+.category aside {
+	padding:.5em;
+}
+.category aside form {
+	padding:0;
 }
 .category .post {
 	border-top: solid 1px #d7dadb; 
