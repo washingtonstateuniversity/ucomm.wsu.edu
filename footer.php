@@ -8,9 +8,7 @@
 <?php wp_footer(); ?>
 <script>
 (function($){
-  $( ".mainAccordion" ).accordion({
-       heightStyle: "content"
-  });  
+	$( ".mainAccordion" ).accordion({ heightStyle: "content" });
 
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -23,17 +21,16 @@
 		}
 	});
 
-  $(document).on('scroll',function(){
-	var top,call_top;
-	call_top = $('.fixme').scrollTop();
-	top = $(document).scrollTop();
-	if(top>call_top){
-		$('.fixme').addClass('fixed');
-	}else{
-		$('.fixme').removeClass('fixed');
-	}
-
-  });
+	$(document).on('scroll',function(){
+		var top,call_top;
+		call_top = $('.fixme').scrollTop();
+		top = $(document).scrollTop();
+		if(top>call_top){
+			$('.fixme').addClass('fixed');
+		} else {
+			$('.fixme').removeClass('fixed');
+		}
+	});
 }(jQuery));
 </script>
 </body>
