@@ -22,13 +22,15 @@
 	});
 
 	$(document).on('scroll',function(){
-		var top,call_top;
-		call_top = $('.fixme').scrollTop();
+		var top;
+		var fixme = $('.fixme');
+		var call_top = fixme.scrollTop();
+
 		top = $(document).scrollTop();
 		if(top>call_top){
-			$('.fixme').addClass('fixed');
+			fixme.addClass('fixed');
 		} else {
-			$('.fixme').removeClass('fixed');
+			fixme.removeClass('fixed');
 		}
 	});
 }(jQuery));
