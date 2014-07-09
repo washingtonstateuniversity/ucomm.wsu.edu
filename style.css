@@ -1260,7 +1260,7 @@ main .mainAccordion .ui-accordion-content ul {
  	background-size: 100% auto;
  	background-position:0% 25%;
  	background-repeat: no-repeat;
- 	margin-top:-3em;
+ 	margin-bottom:50px;
  }
 
  /* ***********************************************************************
