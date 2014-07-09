@@ -9,7 +9,7 @@
 <script>
 (function($){
   $( ".mainAccordion" ).accordion({
-       heightStyle: "content",
+       heightStyle: "content"
   });  
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
