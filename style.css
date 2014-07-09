@@ -897,6 +897,9 @@ main .mainAccordion .ui-accordion-content ul {
 .category .post:first-child {
 	border-top:none;
 }
+.category .post .article-header:first-child {
+	padding-top:0;
+}
 .category .post .excerpt-more-default {
 	margin-left:.5em;
 }
