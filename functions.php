@@ -1,5 +1,4 @@
 <?php
-add_theme_support( 'post-thumbnails' ); 
 add_filter( 'spine_enable_builder_module', '__return_true' );
 
 include_once( 'includes/home-nav.php' ); // Include shortcode plugin.
@@ -7,6 +6,14 @@ include_once( 'includes/home-blog.php' ); // Include shortcode plugin.
 include_once( 'includes/library-of-work.php' ); // Handles library of work shortcode
 include_once( 'includes/cta.php' ); // Include shortcode plugin.
 include_once( 'includes/web-template.php' );
+
+add_action( 'after_setup_theme', 'ucomm_setup_theme' );
+/**
+ * Add support for theme features.
+ */
+function ucomm_setup_theme() {
+	add_theme_support( 'post-thumbnails' );
+}
 
 add_action( 'wp_enqueue_scripts', 'ucomm_enqueue_scripts' );
 function ucomm_enqueue_scripts() {
