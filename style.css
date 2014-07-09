@@ -593,8 +593,17 @@ main footer a:hover {
 	color:#4F868E;
 }
 .dataTables_paginate a {
-	color:#4F868E;
-	text-decoration: none;
+	color:#4F868E !important;
+	text-decoration: none !important;
+}
+.dataTables_paginate a:hover, .dataTables_paginate a:focus {
+	border-bottom:1px solid #193838;
+	background-color:#d3e1e3;
+	color: #193838;
+	-webkit-transition: background-color 0.5s linear;
+	-moz-transition: background-color 0.5s linear;
+	-o-transition: background-color 0.5s linear;
+	transition: background-color 0.5s linear;
 }
 /* ### Forms
 *********************************************************************** */
@@ -1233,7 +1242,6 @@ main .mainAccordion .ui-accordion-content ul {
 	overflow: hidden;
 	padding-top: 1em;
 	padding-bottom:1em;
-	margin-bottom:2.5em;
 	text-align: center;
 }
 .home .sky h1 {
