@@ -827,7 +827,7 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .fixed {
 	position: fixed; 
-	top: 0;
+	top: 50px;
 	margin-top:0;
 	z-index: 1;
 	-webkit-transition: all 0.3s ease-out;

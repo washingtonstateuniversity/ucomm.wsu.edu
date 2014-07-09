@@ -13,7 +13,6 @@ class WSUWP_Web_Template {
 	 * Add hooks.
 	 */
 	public function __construct() {
-		add_filter( 'wp_title', array( $this, 'set_html_title' ) );
 		add_action( 'template_redirect', array( $this, 'handle_template_request' ) );
 	}
 
@@ -37,8 +36,10 @@ class WSUWP_Web_Template {
 				$this->html_title = $_GET['html_title'];
 			}
 
+			add_filter( 'wp_title', array( $this, 'set_html_title' ) );
 			$pre = $this->build_pre_content();
 			$post = $this->build_post_content();
+			remove_filter( 'wp_title', array( $this, 'set_html_title' ) );
 
 			header('HTTP/1.1 200 OK');
 			header('Content-Type: application/json');

@@ -28,7 +28,7 @@ class call_action {
 		// Build the output to return for use by the shortcode.
 		ob_start();
 		?>
- <section class="callbox">
+ <section id="fixedSide" class="callbox">
 <div class="fixme"><a class="call" href="mailto:consult.ucomm@wsu.edu?subject=marketing questions"><span class="ss-icon">mail</span> Contact our marketing consultants</a></div>
 </section>
 		<?php

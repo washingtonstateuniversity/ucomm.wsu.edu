@@ -28,17 +28,9 @@ if ( ! empty( $position ) ) {
 				
 			<?php get_template_part( 'articles/post' ) ?>
 
-			<?php // get_comments( ); ?>
-
 		<?php endwhile; ?>
 		
 		</div> <!--/column-->
-
-	<!-- <div class="column two">
-		
-		<?php get_sidebar(); ?>
-		
-	</div> column two-->
 
 </section>
 
