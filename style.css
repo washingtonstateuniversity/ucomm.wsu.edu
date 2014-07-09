@@ -889,7 +889,7 @@ main .mainAccordion .ui-accordion-content ul {
 	border-top:none;
 }
 .category .post .excerpt-more-default {
-	padding-left:.5em;
+	margin-left:.5em;
 }
 .category .post .article-footer {
 	border-top:none;
