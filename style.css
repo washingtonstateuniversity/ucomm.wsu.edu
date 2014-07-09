@@ -588,9 +588,9 @@ main footer a:hover {
 	margin-bottom:.8em;
 }
 .paginate_disabled_next:after, .paginate_disabled_previous:before, .paginate_enabled_next:after, .paginate_enabled_previous:before {
-	text-shadow:none;
+	text-shadow:none !important;
 	font-weight:400;
-	color:#4F868E;
+	color:#4F868E !important;
 }
 .dataTables_paginate a {
 	color:#4F868E !important;
@@ -599,7 +599,7 @@ main footer a:hover {
 .dataTables_paginate a:hover, .dataTables_paginate a:focus {
 	border-bottom:1px solid #193838;
 	background-color:#d3e1e3;
-	color: #193838;
+	color: #193838 !important;
 	-webkit-transition: background-color 0.5s linear;
 	-moz-transition: background-color 0.5s linear;
 	-o-transition: background-color 0.5s linear;
