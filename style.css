@@ -886,6 +886,9 @@ main .mainAccordion .ui-accordion-content ul {
 	border-top: solid 1px #d7dadb; 
 	padding-top: 8px;
 }
+.category .post:first-child {
+	border-top:none;
+}
 .category .post .excerpt-more-default {
 	padding-left:.5em;
 }
