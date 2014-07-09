@@ -835,39 +835,39 @@ main .mainAccordion .ui-accordion-content ul {
 
 **************************************************************************
 *********************************************************************** */
-main .blog-loop {
+.blog-loop {
 	margin-top:2em;
 	width:98%;
 }
-main .blog-loop li {
+.blog-loop li {
 	list-style: none;
 	padding:.5em 0 3em 0;
 	height:100%;
 }
-main .blog-loop li:before {
+.blog-loop li:before {
 	content: '\e973';
 	display:inline-block;
 	position:absolute;
 	left:-2em;
 	top:.6em;
 }
-main .blog-loop h4 {
+.blog-loop h4 {
 	padding-bottom:0;
 	padding-top:0;
 	margin-bottom:-12px;
 	margin-top:0;
 	text-transform: none;
 }
-main .blog-meta, main .blog-cattag, main .blog-excerpt {
+.blog-meta, .blog-cattag, .blog-excerpt {
 	font-size: 90%;
 	color:#5e6a71;
 }
-main .blog-excerpt {
+.blog-excerpt {
 	display: block;
 	margin-bottom:0;
 	margin-top:2em;
 }
-main .blog-cattag {
+.blog-cattag {
 	display: block;
 	width:90%;
 	padding:.5em;
@@ -879,8 +879,18 @@ main .blog-cattag {
 	border-width:1px 1px 1px 1px;
 	text-shadow:0px 1px 1px #f5f5f5;
 }
+.source {
+	display:none;
+}
+.category .post {
+	border-top: solid 1px #d7dadb; 
+	padding-top: 8px;
+}
+.category .post .excerpt-more-default {
+	padding-left:.5em;
+}
 /* Hiding the category name from the hgroup */ 
-main > .ucomm-bookmark .category, .comments {
+.ucomm-bookmark .category, .comments {
 	display:none !important;
 }
 /* Removes background image placed by featured image */
