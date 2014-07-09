@@ -8,7 +8,9 @@
 <?php wp_footer(); ?>
 <script>
 (function($){
-	var fixed_section_top = jQuery('#fixedSide').parents('section').position().top;
+	var fixed_side = jQuery('#fixedSide');
+	var fixed_section_top = fixed_side.parents('section').position().top;
+	var fixed_section_width = fixed_side.width();
 
 	$( ".mainAccordion" ).accordion({ heightStyle: "content" });
 
@@ -28,10 +30,12 @@
 		var fixme = $('.fixme');
 
 		top = $(document).scrollTop();
-		if( top > ( fixed_section_top - 35 ) ){
+		if( top > ( fixed_section_top - 50 ) ){
 			fixme.addClass('fixed');
+			fixme.css('width', fixed_section_width + 'px');
 		} else {
 			fixme.removeClass('fixed');
+			fixme.css('width','');
 		}
 	});
 }(jQuery));
