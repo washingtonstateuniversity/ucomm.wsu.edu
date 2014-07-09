@@ -34,12 +34,6 @@ if ( ! empty( $position ) ) {
 		
 		</div> <!--/column-->
 
-	<!-- <div class="column two">
-		
-		<?php get_sidebar(); ?>
-		
-	</div> column two-->
-
 </section>
 
 <footer>
