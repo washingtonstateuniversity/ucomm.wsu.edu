@@ -8,6 +8,8 @@
 <?php wp_footer(); ?>
 <script>
 (function($){
+	var fixed_section_top = jQuery('#fixedSide').parents('section').position().top;
+
 	$( ".mainAccordion" ).accordion({ heightStyle: "content" });
 
 	$('#fixedSide' ).on('click','a[href*=#]:not([href=#])', function() {
@@ -24,10 +26,9 @@
 	$(document).on('scroll',function(){
 		var top;
 		var fixme = $('.fixme');
-		var call_top = fixme.scrollTop();
 
 		top = $(document).scrollTop();
-		if(top>call_top){
+		if( top > ( fixed_section_top - 35 ) ){
 			fixme.addClass('fixed');
 		} else {
 			fixme.removeClass('fixed');
