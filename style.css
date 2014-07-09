@@ -937,15 +937,12 @@ main .mainAccordion .ui-accordion-content ul {
 .single-post .ucomm-bookmark .post {
 	display:none;
 }
-.single-post .article-body {
+.single-post .article-body, .content-modal-content .article-body {
 	padding-left:3em;
 	padding-right:3em;
 	padding-top:5em;
-	margin-top:2.5em;
+	margin-top:4em;
 	width:850px;
-}
-.content-modal .article-header {
-	margin-bottom:3em;
 }
 .content-modal-content a {
 	border-bottom:1px solid #4F868E;
