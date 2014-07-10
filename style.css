@@ -898,6 +898,9 @@ main .mainAccordion .ui-accordion-content ul {
 .category aside {
 	padding:.5em;
 }
+.category aside p {
+	font-size: 90%;
+}
 .category aside form {
 	padding:0;
 }
@@ -906,6 +909,10 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .category .post:first-child {
 	border-top:none;
+}
+.category .article-header {
+	padding-bottom:0;
+	margin-bottom:1.5em;
 }
 .category .post .article-header:first-child {
 	padding-top:0;
