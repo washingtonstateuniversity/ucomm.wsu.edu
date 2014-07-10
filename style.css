@@ -892,35 +892,35 @@ main .mainAccordion .ui-accordion-content ul {
 .source {
 	display:none;
 }
-.category a {
+.archive a {
 	text-decoration: none;
 }
-.category aside {
+.archive aside {
 	padding:.5em;
 }
-.category aside p {
+.archive aside p {
 	font-size: 90%;
 }
-.category aside form {
+.archive aside form {
 	padding:0;
 }
-.category .post {
+.archive .post {
 	border-top: solid 1px #d7dadb; 
 }
-.category .post:first-child {
+.archive .post:first-child {
 	border-top:none;
 }
-.category .article-header {
+.archive .article-header {
 	padding-bottom:0;
 	margin-bottom:1.5em;
 }
-.category .post .article-header:first-child {
+.archive .post .article-header:first-child {
 	padding-top:0;
 }
-.category .post .excerpt-more-default {
+.archive .post .excerpt-more-default {
 	margin-left:.5em;
 }
-.category .post .article-footer {
+.archive .post .article-footer {
 	border-top:none;
 }
 /* Hiding the category name from the hgroup */ 
