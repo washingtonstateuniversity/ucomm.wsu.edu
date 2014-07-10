@@ -187,7 +187,7 @@ main .site .addGray {
 main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon {
 	font-family: "SSPika";
 }
-.article-header h1, .lead, main footer, main figcaption  {
+.article-header h1, .lead, main footer, main figcaptionarchiv  {
 	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
 }
 .ss-icon {
@@ -208,19 +208,17 @@ main h1, h2, h3, h4, h5, h6 {
 	font-weight: lighter;
 	text-transform: lowercase;
 	letter-spacing: 0;
-}
-main h1, main h2, main h3 {
 	color:#262b2e;
 }
-main h2 {
+h2 {
 	font-size:2em;
 	margin-top: .475em;
 	margin-bottom: .475em !important;
 	}
-main h3 {
+h3 {
 	margin-top:1em;
 }
-main h4 {
+h4 {
 	line-height: 1.3em;
 	margin-top: 1em;
 	margin-bottom: .675em;
@@ -242,25 +240,13 @@ main h4 {
 
 /* ### Paragraph
 *********************************************************************** */
-main p {
+p {
 	font-size:1.1em;
 	line-height: 1.65em;
 	margin-bottom:1.8em;
 }
-main p+p {
+p+p {
 	margin-top:-1em;
-}
-/* Styling of the paragraphs that follow h5 */
-main h5+p {
-	font-size: .875em;
-	line-height: 1.875em;
-	color: #4f868E;
-}
-/* Styling of the paragraphs that follow h6  */
-main h6+p {
-	font-size: .875em;
-	line-height: 1.875em;
-	color: #000;
 }
 
 /* #### Paragraph specialities
@@ -437,7 +423,7 @@ main sup {
 
 /* ### Aside
 *********************************************************************** */
-main aside {
+aside {
 	background-image:url('/wp-content/uploads/sites/61/2014/06/bg-fourty.png');
 	background-attachment: fixed;
 	background-color: #eddccc;
@@ -451,21 +437,21 @@ main aside {
 	line-height: 1.5em;
 	margin:1em;
 }
-main aside h4 {
+aside h4 {
 	margin-top:0;
 	padding-top:0;
 }
-main aside ul {
+aside {
 	margin-bottom:0;
 	margin-left:0;
 	font-size: 90%;
 }
 /* Create a smaller aside for side content */
-main .asism {
+.asism {
 	font-size: 88%;
 	padding:.8em;
 }
-main .asism h4 {
+.asism h4 {
 	font-size:110%;
 }
 /* ### Address
@@ -499,15 +485,15 @@ main address + header {
 
 /* ### Figure
 *********************************************************************** */
-main figure + h1, main figure + h2, main figure + h3, main figure + h4, main figure + h5, main figure + p {
+figure + h1, figure + h2, figure + h3, figure + h4, figure + h5, figure + p {
 	margin-top:2em;
 }
-main figure figcaption {
+figure figcaption {
 	text-align: center;
 	font-size: 1em;
 	font-style: italic;
 }
-main figure {
+figure {
 	border-bottom:solid 1px #d7dadb;
 }
 
@@ -899,10 +885,11 @@ main .mainAccordion .ui-accordion-content ul {
 	padding:.5em;
 }
 .archive aside header {
-	font-size: 100%;
+	font-size: 110%;
 	font-weight: 700;
 	margin-bottom:1.5em;
 	margin-top:1.5em;
+	margin-left:.5em;
 }
 .archive aside p {
 	font-size: 90%;
