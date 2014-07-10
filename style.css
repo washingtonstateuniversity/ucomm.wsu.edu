@@ -508,16 +508,16 @@ main footer {
 }
 main footer a {
 	text-decoration: none;
-	color: #4F868E;
+	color: #4F868E !important;
 }
 main footer a:hover {
-	color: #193838;
+	color: #193838 !important;
 	text-decoration: none;
 }
 
 /* ### Tables
 *********************************************************************** */
-.table {
+table {
 	font-size: 90%;
 	width:100%;
 	margin-top:12px;
@@ -534,7 +534,7 @@ main footer a:hover {
 	text-align: center;
 	font-size: 1.4em;
 }
-.table th {
+th {
 	font-weight: 700;
 	text-align: center;
 	padding-bottom:1em;
@@ -542,13 +542,13 @@ main footer a:hover {
 	vertical-align: middle;
 	background-color: #D7DADB !important;
 }
-.table tr td, .table th {
+tr td, th {
 	padding:.3em;
 }
-.table tr:hover, .table-striped tr:nth-child(even):hover {
+tr:hover, .table-striped tr:nth-child(even):hover {
 	background-color:#f9f4e7;
 }
-.table td:hover {
+td:hover {
 	background-color:#f1e4c4;
 }
 .bordered tr td {
