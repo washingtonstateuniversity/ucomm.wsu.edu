@@ -34,3 +34,15 @@
 	?>
 </hgroup>
 </header>
+
+<?php 
+
+	if (is_archive()) {
+		echo '<div class="article-header pgbldrhead"><section class="row single article-title">
+	<div class="column one">
+					<h1>Blog</h1>
+			</div>
+</section>
+</div>';
+	}
+?>

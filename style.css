@@ -898,8 +898,15 @@ main .mainAccordion .ui-accordion-content ul {
 .archive aside {
 	padding:.5em;
 }
+.archive aside header {
+	font-size: 100%;
+	font-weight: 700;
+	margin-bottom:1.5em;
+	margin-top:1.5em;
+}
 .archive aside p {
 	font-size: 90%;
+	padding:0 .5em 0 .5em;
 }
 .archive aside form {
 	padding:0;
