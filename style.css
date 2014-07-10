@@ -506,6 +506,14 @@ main footer {
 	font-size: 1.1em;
 	line-height: 1.5em;
 }
+main footer a {
+	text-decoration: none;
+	color: #4F868E;
+}
+main footer a:hover {
+	color: #193838;
+	text-decoration: none;
+}
 
 /* ### Tables
 *********************************************************************** */
