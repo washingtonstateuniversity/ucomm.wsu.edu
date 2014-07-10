@@ -1041,7 +1041,7 @@ main .mainAccordion .ui-accordion-content ul {
 	padding:0;
 }
 .metro ul {
-	margin:5px auto auto 5px;
+	margin:0px auto auto 0px;
 	padding:0 !important;
 }
 .metro ul li {
@@ -1392,6 +1392,9 @@ main .mainAccordion .ui-accordion-content ul {
 		margin-top:0 !important;
 		margin-left:4% !important; 
 		padding-left:0;
+	}
+	.metro ul li a .label h3 {
+		margin:-0.5em 0.5em -.5em;
 	}
 	.nested-thirds .nested-one,.nested-thirds .nested-two,.nested-thirds .nested-three {
 		width:100%;
