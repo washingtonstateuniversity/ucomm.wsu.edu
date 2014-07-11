@@ -184,7 +184,7 @@ main .site .addGray {
 .site > a:nth-child(1) {
 	font-family: "OpenSans-CondLight";
 }
-main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon {
+main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon, .archive .post .article-header:before {
 	font-family: "SSPika";
 }
 .article-header h1, .lead, main footer, main figcaptionarchiv  {
@@ -852,9 +852,9 @@ main .mainAccordion .ui-accordion-content ul {
 	content: '\e973';
 	display:inline-block;
 	position:absolute;
-	left:-1em;
-	top:.6em;
-	font-size:2em;
+	left:-1.6em;
+	top:1em;
+	font-size:1.2em;
 }
 .blog-loop h4, .archive .post .article-header {
 	padding-bottom:0;
