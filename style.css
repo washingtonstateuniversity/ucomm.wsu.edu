@@ -902,6 +902,10 @@ main .mainAccordion .ui-accordion-content ul {
 	width:100%;
 }
 .archive aside form input {
+	margin-top:.5em;
+	margin-bottom:.5em;
+}
+.archive aside form input, .archive aside form label {
 	float:left;
 }
 .archive aside form #searchsubmit {
