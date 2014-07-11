@@ -436,23 +436,20 @@ aside {
 	font-weight: bold;
 	line-height: 1.5em;
 	margin:1em;
-}
-aside h4 {
-	margin-top:0;
-	padding-top:0;
-}
-aside {
 	margin-bottom:0;
 	margin-left:0;
-	font-size: 90%;
+	font-size: 98%;
+}
+aside h4, .archive aside header {
+	margin-top:0;
+	margin-bottom:.675em;
+	padding-top:0;
+	font-size:110%;
 }
 /* Create a smaller aside for side content */
 .asism {
 	font-size: 88%;
 	padding:.8em;
-}
-.asism h4 {
-	font-size:110%;
 }
 /* ### Address
 *********************************************************************** */
@@ -897,7 +894,7 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-bottom:.8em;
 }
 .archive aside {
-	padding:.5em;
+	padding:.7em;
 }
 .archive aside p {
 	font-size: 90%;
