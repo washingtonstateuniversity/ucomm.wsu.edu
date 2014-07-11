@@ -848,7 +848,15 @@ main .mainAccordion .ui-accordion-content ul {
 	left:-2em;
 	top:.6em;
 }
-.blog-loop h4 {
+.archive .post .article-header:before {
+	content: '\e973';
+	display:inline-block;
+	position:absolute;
+	left:-1em;
+	top:.6em;
+	font-size:2em;
+}
+.blog-loop h4, .archive .post .article-header {
 	padding-bottom:0;
 	padding-top:0;
 	margin-bottom:-12px;
@@ -859,12 +867,12 @@ main .mainAccordion .ui-accordion-content ul {
 	font-size: 90%;
 	color:#5e6a71;
 }
-.blog-excerpt {
+.blog-excerpt, .article-summary {
 	display: block;
 	margin-bottom:0;
 	margin-top:2em;
 }
-.blog-cattag {
+.blog-cattag, .article-footer {
 	display: block;
 	width:90%;
 	padding:.5em;
@@ -879,18 +887,17 @@ main .mainAccordion .ui-accordion-content ul {
 .source {
 	display:none;
 }
-.archive a {
+.archive .article-header hgroup .article-title {
 	text-decoration: none;
+	font-size: 150%;
+	padding-bottom:0;
+}
+.archive .article-footer {
+	margin-top:.8em;
+	margin-bottom:.8em;
 }
 .archive aside {
 	padding:.5em;
-}
-.archive aside header {
-	font-size: 110%;
-	font-weight: 700;
-	margin-bottom:1.5em;
-	margin-top:1.5em;
-	margin-left:.5em;
 }
 .archive aside p {
 	font-size: 90%;
@@ -911,6 +918,7 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .archive .post {
 	border-top: solid 1px #d7dadb; 
+	padding-left:2em;
 }
 .archive .post:first-child {
 	border-top:none;
@@ -918,15 +926,15 @@ main .mainAccordion .ui-accordion-content ul {
 .archive .article-header {
 	padding-bottom:0;
 	margin-bottom:1.5em;
+	display:block;
+	height:100%;
 }
 .archive .post .article-header:first-child {
 	padding-top:0;
 }
-.archive .post .excerpt-more-default {
+.archive .post .article-summary a {
 	margin-left:.5em;
-}
-.archive .post .article-footer {
-	border-top:none;
+	display:inline-block;
 }
 /* Hiding the category name from the hgroup */ 
 .ucomm-bookmark .category, .comments {
@@ -936,7 +944,7 @@ main .mainAccordion .ui-accordion-content ul {
 .single-post main {
 	background-image:none;
 }
-.single-post .article-footer, .single-post .pager,.wp-edit-link {
+.single-post .article-footer, .single-post .pager,.wp-edit-link, .archive .categorized {
 	display:none;
 }
 /* Changes the header style on posts only */
