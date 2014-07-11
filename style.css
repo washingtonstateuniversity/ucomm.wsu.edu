@@ -899,6 +899,13 @@ main .mainAccordion .ui-accordion-content ul {
 .archive aside form {
 	padding:0;
 }
+.archive aside form input {
+	float:left;
+	width:100%;
+}
+.archive aside form #searchsubmit {
+	float:right;
+}
 .archive .post {
 	border-top: solid 1px #d7dadb; 
 }
