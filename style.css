@@ -876,9 +876,6 @@ main .mainAccordion .ui-accordion-content ul {
 	border-width:1px 1px 1px 1px;
 	text-shadow:0px 1px 1px #f5f5f5;
 }
-.source {
-	display:none;
-}
 .archive a {
 	text-decoration: none;
 }
