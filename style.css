@@ -899,6 +899,9 @@ main .mainAccordion .ui-accordion-content ul {
 .archive aside form {
 	padding:0;
 }
+.archive aside form #s {
+	width:100%;
+}
 .archive aside form input {
 	margin-top:.5em;
 	margin-bottom:.5em;
