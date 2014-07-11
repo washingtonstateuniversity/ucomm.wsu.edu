@@ -755,14 +755,14 @@ main .mainAccordion .ui-accordion-content ul {
 #fixedSide .fixed {
 	width:20%;
 }
-#fixedSide h6 {
+#fixedSide h5 {
 	margin-bottom:1em;
 }
 #fixedSide ol li ol, #fixedSide ul li ul {
 	padding-bottom:0;
 }
 #fixedSide ol li, #fixedSide ul li {
-	font-size: 92%;
+	font-size: 98%;
 	line-height: 1.4em;
 	margin-bottom:4px;
 	padding-bottom: 0;
