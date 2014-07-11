@@ -1090,7 +1090,6 @@ main .mainAccordion .ui-accordion-content ul {
 	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
 	font-style: italic;
 	font-size: 2.4em;
-	border-bottom:1px solid #d7dadb;
 }
 .metro ul li a .label:hover h3, .metro ul li a .label:focus h3 {
 	color:#464e54;
@@ -1108,6 +1107,9 @@ main .mainAccordion .ui-accordion-content ul {
 .metro ul li a:hover .label, .metro ul li a:focus .label {
 	top:155px;
 	background-color:#f5f5f5;
+}
+.metro ul li a:hover .label h3, .metro ul li a:focus .label h3 {
+	border-bottom:1px solid #d7dadb;
 }
 .metro .metroTitle {
 	background-color:#464e54;	
