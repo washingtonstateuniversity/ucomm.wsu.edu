@@ -204,7 +204,7 @@ main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main
 
 /* ### Headers
 *********************************************************************** */
-main h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: lighter;
 	text-transform: lowercase;
 	letter-spacing: 0;
@@ -214,7 +214,7 @@ h2 {
 	font-size:2em;
 	margin-top: .475em;
 	margin-bottom: .475em !important;
-	}
+}
 h3 {
 	margin-top:1em;
 }
@@ -232,10 +232,6 @@ h4 {
 	padding:0px;
 	font-size:1em;
 	font-weight:600;
-}
-.subhead {
-	padding-top:0;
-	margin-top:-2em;
 }
 
 /* ### Paragraph
@@ -306,19 +302,16 @@ main ul li ul li:before {
 main ul li ul li {
 	list-style: disc;
 }
-main h2+ul,  {
+h2+ul,  {
 	padding-top:1em;
 }
-main h3+ol main header+ol {
-	margin-top:2em;
-}
-main h3+ul, main header+ul {
+h3+ol, header+ol, h3+ul, header+ul  {
 	margin-top:1em;
 }
-main p+ul {
+p+ul {
 	margin-top:-1.2em;
 }
-main p+ol {
+p+ol {
 	margin-top:-1em;
 }
 /* ### Links
@@ -444,13 +437,10 @@ aside h4, .archive aside header {
 	margin-top:0;
 	margin-bottom:.675em;
 	padding-top:0;
-	font-size:110%;
+	font-size:1.3em;
+	font-weight:700;
 }
-/* Create a smaller aside for side content */
-.asism {
-	font-size: 88%;
-	padding:.8em;
-}
+
 /* ### Address
 *********************************************************************** */
 main address {
@@ -590,6 +580,7 @@ td:hover {
 	-o-transition: background-color 0.5s linear;
 	transition: background-color 0.5s linear;
 }
+
 /* ### Forms
 *********************************************************************** */
 /* .gform_body {
@@ -820,8 +811,19 @@ main .mainAccordion .ui-accordion-content ul {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.fluid-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-.fluid-container iframe, .fluid-container object, .fluid-container embed, .fluid-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.fluid-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+}
+.fluid-container iframe, .fluid-container object, .fluid-container embed, .fluid-container video { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
 /* ***********************************************************************
 **************************************************************************
 
@@ -873,7 +875,7 @@ main .mainAccordion .ui-accordion-content ul {
 	display: block;
 	width:90%;
 	padding:.5em;
-	background-image:url('../images/elements/bg-fourty.png');
+	background-image:url('/wp-content/uploads/sites/61/2014/06/bg-fourty.png');
 	background-attachment: fixed;
 	background-color: #eddccc;
 	border-style:solid;
@@ -974,6 +976,7 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-top:2.5em;
 	width:850px;
 }
+/* Content modals that display the single-post on library of work */
 .content-modal-content .article-body {
 	margin-top:2.5em;
 }
