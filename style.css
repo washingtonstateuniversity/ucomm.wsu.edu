@@ -1167,7 +1167,7 @@ main .mainAccordion .ui-accordion-content ul {
 	background-image: url("/wp-content/uploads/sites/61/2014/06/presentation.jpg");
 }
 .metro .photo {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/metro-photo.jpg");
+	background-image: url("/wp-content/uploads/sites/61/2014/07/photosvideo.jpg");
 }
 /* Creates a smaller version of the metro navigation for inside pages */
 .smallm .metro {
@@ -1196,13 +1196,6 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .smallm .metro ul li a:hover .label, .smallm .metro ul li a:focus .label {
 	top:160px;
-}
-.smallm .metro .metroTitle, .smallm .metro .web, .smallm .metro .email,.smallm .metro .printed, .smallm .metro .presentations, .smallm .metro .photo {
-	height:200px;
-	width:50%;
-	background-size: 226px auto;
-	background-position: top center;
-	background-repeat:no-repeat;
 }
 .lib-work .column{
 	margin-top:0;
