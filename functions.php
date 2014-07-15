@@ -46,7 +46,7 @@ Add responsive container to embeds
 function embed_html($html) {
     return '<div class="fluid-container">'.$html.'</div>';
 }
-add_filter( 'embed_oembed_html', 'embed_html', 10, 3 );
+add_filter( 'embed_oembed_html', 'embed_html', 99, 4 );
 
 /* 
 Add tablepress parameters
