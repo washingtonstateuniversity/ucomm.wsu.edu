@@ -43,12 +43,14 @@ function ucomm_the_excerpt( $excerpt ) {
 /* 
 Add responsive container to embeds
 ------------------------------------ */ 
-function alx_embed_html($html) {
+function embed_html($html) {
     return '<div class="fluid-container">'.$html.'</div>';
 }
-add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
-add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
+add_filter( 'embed_oembed_html', 'embed_html', 10, 3 );
 
+/* 
+Add tablepress parameters
+------------------------------------ */ 
 add_filter( 'tablepress_datatables_parameters', 'spine_params', 10, 4 );
 /**
  * Filter Tablepress's call of the Datatables plugin to add an "All" option for viewing
