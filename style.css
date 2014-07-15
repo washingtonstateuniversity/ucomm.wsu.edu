@@ -1250,7 +1250,7 @@ main .mainAccordion .ui-accordion-content ul {
 	border-width: 0 0 25px 0;
 	border-color: rgba(237, 220, 204,0.3);
 	overflow: hidden;
-	padding-top: 1em;
+	padding-top: 1.2em;
 	padding-bottom:1em;
 	text-align: center;
 }
@@ -1262,6 +1262,7 @@ main .mainAccordion .ui-accordion-content ul {
 	color:white;
 	font-family: "OpenSans-CondLight";
 	letter-spacing: -1px;
+	padding-left:98px;
 }
 .home .lead {
 	margin-left:28px;
@@ -1350,7 +1351,7 @@ main .mainAccordion .ui-accordion-content ul {
 	font-size: 1em;
 	margin-top:100px;
 	height:40px;
-}
+	}
 	/* Helper elements assistance */
 	.nested-one {
 		display: block;
@@ -1382,6 +1383,7 @@ main .mainAccordion .ui-accordion-content ul {
 	/* Page specific targeting */
 	.home .sky h1 {
 		font-size: 280%;
+		padding-left:0;
 	}
 	.home .lead {
 		font-size: 130%;
@@ -1442,7 +1444,6 @@ main .mainAccordion .ui-accordion-content ul {
 	}
 	.article-header {
 		padding-bottom: 2em;
-	
 	}
 	.article-header h1  {
 		font-size: 2em;

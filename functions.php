@@ -47,7 +47,6 @@ function embed_html($html) {
     return '<div class="fluid-container">'.$html.'</div>';
 }
 add_filter( 'embed_oembed_html', 'embed_html', 99, 4 );
-
 /* 
 Add tablepress parameters
 ------------------------------------ */ 
