@@ -15,7 +15,7 @@
 	<div class="tagline"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_tagline ); ?>" rel="home"><?php echo esc_html( $site_tagline ); ?></a></div>
 	<?php
 
-	if ( spine_is_subpage() ) {
+	if ( spine_is_sub() ) {
 		echo '	<div class="section">' . spine_section_meta( 'title' ) . '</div>';
 	}
 
