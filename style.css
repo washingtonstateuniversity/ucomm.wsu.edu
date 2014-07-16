@@ -55,12 +55,16 @@
 	## Metro navigation - Line
 	## Page specific targeting - Line
 		### Homepage / - Line
-		### ### Photos + Video /photos-video/ - Line
 
 # Table of contents media devices
 	## Min/Max 990 - Line
 	## Min/Max 790 - Line
 	## Min/Max 480 - Line
+
+#Notes of interest
+
+You can find the homepage metro images in the WordPress CSS Stylesheet Editor
+You can find the photos and video image in the WordPress CSS Stylesheet Editor
 
 **************************************************************************
 *********************************************************************** */
@@ -187,13 +191,15 @@ main .site .addGray {
 main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon, .archive .post .article-header:before {
 	font-family: "SSPika";
 }
-.article-header h1, .lead, main footer, main figcaptionarchiv  {
+.article-header h1, .lead, main footer, main figcaption, .source, .metro ul li a .label h3  {
 	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
 }
 .ss-icon {
 	color:inherit;
 }
-
+.single-post .sub-title,.smallm .metro ul .lib a h3  {
+		font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
 /* ***********************************************************************
 **************************************************************************
 
@@ -883,8 +889,10 @@ main .mainAccordion .ui-accordion-content ul {
 	border-width:1px 1px 1px 1px;
 	text-shadow:0px 1px 1px #f5f5f5;
 }
-.source {
-	display:none;
+.article-header hgroup.source, .article-header .hgroup.source {
+	text-transform: none;
+	font-size: 1.1em;
+	padding-top:8px;
 }
 .archive .article-header hgroup .article-title {
 	text-decoration: none;
@@ -948,33 +956,27 @@ main .mainAccordion .ui-accordion-content ul {
 }
 /* Changes the header style on posts only */
 .single-post .article-header {
-	width:60%;
+	width:80%;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:1em;
 	margin-bottom:0;
 	text-align: center;
-	border-bottom:none;
 }
 .single-post .sub-title {
-	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	font-style: normal;
 	letter-spacing: 0px;
 	color:#464e54;
 	font-size: 40%;
 }
-.single-post .article-header hgroup.source {
-	display:none;
-}
 .single-post .ucomm-bookmark .post {
 	display:none;
 }
 .single-post .article-body {
-	padding-left:3em;
-	padding-right:3em;
-	padding-top:5em;
-	margin-top:2.5em;
-	width:850px;
+	width:80%;
+	margin-top:112px;
+	margin-left:auto;
+	margin-right:auto;
 }
 /* Content modals that display the single-post on library of work */
 .content-modal-content .article-body {
@@ -1105,7 +1107,6 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-right:.5em;
 	padding-top:0;
 	padding-bottom:.5em;
-	font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
 	font-style: italic;
 	font-size: 2.4em;
 }
@@ -1154,21 +1155,6 @@ main .mainAccordion .ui-accordion-content ul {
 	background-repeat: no-repeat;
 	background-size:100%;
 }
-.metro .web {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/webhome.jpg");
-}
-.metro .email {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/metro-email.jpg");
-}
-.metro .printed {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/twentyfourteenimaginetomorrowposter1.jpg");
-}
-.metro .presentations {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/presentation.jpg");
-}
-.metro .photo {
-	background-image: url("/wp-content/uploads/sites/61/2014/07/photosvideo.jpg");
-}
 /* Creates a smaller version of the metro navigation for inside pages */
 .smallm .metro {
 	margin-bottom:1.2em;
@@ -1186,7 +1172,6 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-left:0;
 	position: relative;
 	border-bottom: none;
-	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	font-style: normal;
 }
 .smallm .metro ul li a .label {
@@ -1220,7 +1205,6 @@ main .mainAccordion .ui-accordion-content ul {
 	height:50px;
 	font-size: 1.1em;
 	border-bottom: none;
-	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	font-style: normal;
 	text-transform:none;
 }
@@ -1269,7 +1253,6 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-right:28px;
 }
 .home .announce {
-	background: url('/wp-content/uploads/sites/61/2014/06/announcement.jpg');
 	background-size:100% auto;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -1279,19 +1262,6 @@ main .mainAccordion .ui-accordion-content ul {
 .home .announce a {
 	border-bottom:none;
 }
-
-/* ### Photos + Video /photos-video/
-*********************************************************************** */
-.photography {
- 	height:28em;
- 	width:100%;
- 	background-image: url("/wp-content/uploads/sites/61/2014/06/campusview.jpg");
- 	background-size: 100% auto;
- 	background-position:0% 25%;
- 	background-repeat: no-repeat;
- 	margin-bottom:50px;
- }
-
  /* ***********************************************************************
 **************************************************************************
 
@@ -1337,20 +1307,13 @@ main .mainAccordion .ui-accordion-content ul {
 	.smallm .metro ul li a:hover .label {
 		top:100px;
 	}
-	.smallm .metro .metroTitle, .smallm .metro .web, .smallm .metro .email,.smallm .metro .printed, .smallm .metro .presentations, .smallm .metro .photo, .smallm .metro .lib  {
-		height:150px;
-		width:100%;
-		background-size: 100% auto;
-		background-position: top left;
-		background-repeat:no-repeat;
-	}
 	.smallm .metro ul li a:hover {
 		background-color: transparent;
 	} 
 	.smallm .metro ul .lib a h3 {
-	font-size: 1em;
-	margin-top:100px;
-	height:40px;
+		font-size: 1em;
+		margin-top:100px;
+		height:40px;
 	}
 	/* Helper elements assistance */
 	.nested-one {
@@ -1459,10 +1422,5 @@ main .mainAccordion .ui-accordion-content ul {
 	}
 	.padtop {
 		padding-top:0;
-	}
-	/* Blog and single post */
-	.single-post .article-body {
-		padding-left:0;
-		padding-right:0;
 	}
 }
