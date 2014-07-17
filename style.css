@@ -198,7 +198,7 @@ main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main
 	color:inherit;
 }
 .single-post .sub-title,.smallm .metro ul .lib a h3  {
-		font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 }
 /* ***********************************************************************
 **************************************************************************
@@ -259,8 +259,6 @@ p+p {
 	font-size: 1.6em;
 	line-height: 1.6em;
 	letter-spacing: 0;
-	padding-bottom:1em;
-	padding-top:1em;
 }
 .lead .single .column p {
 	margin-bottom:0;
@@ -1032,13 +1030,9 @@ main .mainAccordion .ui-accordion-content ul {
 	background-color: rgba(152, 30, 50,1);
 	color:#f5f5f5;
 	text-transform: uppercase;
-	padding-top:20px;
-	padding-bottom:20px;
 	border:none;
 	padding:1em;
-	display:inline-block;
-	margin-top:2.5em;
-	margin-bottom:1em;
+	display:block;
 }
 .call .ss-icon {
 	font-size: 1.2em;
@@ -1249,19 +1243,9 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-left:98px;
 }
 .home .lead {
-	margin-left:28px;
-	margin-right:28px;
+	margin:28px 28px 36px 28px;
 }
-.home .announce {
-	background-size:100% auto;
-	background-repeat: no-repeat;
-	text-align: center;
-	font-size: 1.4em;
-	padding:0;
-}
-.home .announce a {
-	border-bottom:none;
-}
+
  /* ***********************************************************************
 **************************************************************************
 
