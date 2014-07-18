@@ -439,8 +439,8 @@ aside {
 	font-size: 98%;
 }
 aside h4, .archive aside header {
-	margin-top:0;
-	margin-bottom:.675em;
+	margin-top:1em;
+	margin-bottom:1em;
 	padding-top:0;
 	font-size:130%;
 	font-weight:700;
@@ -849,7 +849,7 @@ main .mainAccordion .ui-accordion-content ul {
 	display:inline-block;
 	position:absolute;
 	left:-2em;
-	top:.6em;
+	top:.8em;
 }
 .archive .post .article-header:before {
 	content: '\e973';
@@ -865,20 +865,24 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-top:0;
 	text-transform: none;
 }
+.blog-loop .source {
+	margin-bottom:1em;
+	color: rgba(0, 0, 0, 0.5);
+}
 .blog-meta, .blog-cattag, .blog-excerpt {
 	font-size: 90%;
-	color:#5e6a71;
 }
-.blog-excerpt {
-	margin-bottom:0;
-	padding-bottom:.8em;
+.blog-loop .blog-excerpt p {
+	margin-bottom:1em;
 	margin-top:1.2em;
+	padding-bottom:.8em;
 }
 .archive .article-summary {
 	padding-top:1.2em;
 }
 .blog-cattag, .article-footer {
-	padding:.5em;
+	color: rgba(0, 0, 0, 0.5);
+	padding:.5em 0 .5em 0;
 	border-style:solid;
 	border-color:#d7dadb;
 	border-width:1px 0px 0px 0px;
@@ -896,14 +900,14 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .archive .article-footer {
 	margin-top:.8em;
-	margin-bottom:1.2em;
+	margin-bottom:3em;
 }
 .archive aside {
 	padding:.7em;
 }
-.archive aside p {
+.archive aside {
 	font-size: 90%;
-	padding:0 .5em 0 .5em;
+	padding:.8em;
 }
 .archive aside form {
 	padding:0;
@@ -956,11 +960,8 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-bottom:0;
 	text-align: center;
 }
-.single-post .sub-title {
-	font-style: normal;
-	letter-spacing: 0px;
-	color:#464e54;
-	font-size: 40%;
+.single-post .source {
+	margin-top:1em;
 }
 .single-post .ucomm-bookmark .post {
 	display:none;
@@ -1274,7 +1275,10 @@ main .mainAccordion .ui-accordion-content ul {
 **************************************************************************
 *********************************************************************** */
 @media (max-width: 790px) {
-	/* Helper elements structural */
+	main .ucomm-bookmark {
+		text-align: left;
+		left:1em;
+	}
 	.smallm .metro {
 		margin-bottom:1.2em;
 	}
