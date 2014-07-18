@@ -843,7 +843,6 @@ main .mainAccordion .ui-accordion-content ul {
 .blog-loop li {
 	list-style: none;
 	padding:.5em 0 3em 0;
-	height:100%;
 }
 .blog-loop li:before {
 	content: '\e973';
