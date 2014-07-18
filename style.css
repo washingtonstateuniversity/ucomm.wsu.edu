@@ -481,8 +481,9 @@ figure + h1, figure + h2, figure + h3, figure + h4, figure + h5, figure + p {
 }
 figure figcaption {
 	text-align: center;
-	font-size: 1em;
+	font-size: 1.2em;
 	font-style: italic;
+	color:#262b2e;
 }
 figure {
 	border-bottom:solid 1px #d7dadb;
@@ -932,7 +933,6 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-bottom:0;
 	margin-bottom:1.5em;
 	display:block;
-	height:100%;
 }
 .archive .post .article-header:first-child {
 	padding-top:0;
