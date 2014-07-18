@@ -433,7 +433,7 @@ aside {
 	font-weight: bold;
 	line-height: 1.5em;
 	margin:1em;
-	margin-bottom:0;
+	margin-bottom:2em;
 	margin-left:0;
 	font-size: 98%;
 }
@@ -444,16 +444,17 @@ aside h4, .archive aside header {
 	font-size:1.3em;
 	font-weight:700;
 }
-
+p+aside{
+	margin-top:0;
+}
 /* ### Address
 *********************************************************************** */
 main address {
 	padding-top:1em;
 	padding-bottom:1em;
-	padding-left:1em;
+	padding-left:4em;
 	display: block;
 	position:relative;
-	padding-left:4em;
 	width:40%;
 }
 main address:before {
@@ -481,9 +482,8 @@ figure + h1, figure + h2, figure + h3, figure + h4, figure + h5, figure + p {
 }
 figure figcaption {
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-style: italic;
-	color:#262b2e;
 }
 figure {
 	border-bottom:solid 1px #d7dadb;
@@ -1252,12 +1252,7 @@ main .mainAccordion .ui-accordion-content ul {
 
 **************************************************************************
 *********************************************************************** */
-@media (min-width: 990px) { 
-	/* Home rebound column size for full width */
-	.home .sky .rebound .column {
-		width:1272px;
-	} 
-}
+
 @media (max-width: 990px) { 
 /* Block quotes */
 	.bqmd {
@@ -1366,6 +1361,14 @@ main .mainAccordion .ui-accordion-content ul {
 	.nested-halves .nested-one,.nested-halves .nested-two,.nested-halves .nested-three {
 		width:100%;
 		margin-bottom:1em;
+	}
+	address {
+	padding-top:1em;
+	padding-bottom:1em;
+	padding-left:1em;
+	display: block;
+	position:relative;
+	width:90%;
 	}
 }
 
