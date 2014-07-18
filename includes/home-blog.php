@@ -49,6 +49,25 @@ if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->t
 ?>
   <li class="nested-seperated">
    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+   <hgroup class="source">
+		<?php
+			// Published on
+			/* $year = get_the_date('Y'); $day = get_the_date('j'); $month = get_the_date('F');
+			echo '<time class="article-date" datetime="'.get_the_date( 'c' ).'">';
+			echo '	<span class="month">'.$month.'</span>';
+			echo '	<span class="day">'.$day.'</span>';
+			echo '	<span class="year">'.$year.'</span>';
+			echo '</time>'; */
+			echo '<time class="article-date" datetime="'.get_the_date( 'c' ).'">';
+			echo the_date();
+			echo '</time>';
+			
+			// Published by
+			$author = get_the_author();
+			$author_articles = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+			echo ' <cite class="article-author" role="author"><a href="'.$author_articles.'">'.$author.'</a></cite>';
+		?>
+		</hgroup>
    <span class="blog-excerpt"><?php the_excerpt(); ?></span>
    <span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
   </li>

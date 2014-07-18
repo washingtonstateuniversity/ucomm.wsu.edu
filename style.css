@@ -112,7 +112,8 @@ main .ucomm-bookmark  {
 	display: block;
 	position: relative;
 	top: 20px;
-	left: 75%;
+	right: 2em;
+	text-align: right;
 	border: 0px;
 	margin-top:0;
 }
@@ -429,7 +430,7 @@ aside {
 	border-color:#ddbea1;
 	border-width:2px 2px 2px 2px;
 	text-shadow:0px 1px 1px #f5f5f5;
-	font-size: 1.1em;
+	font-size: 110%;
 	font-weight: bold;
 	line-height: 1.5em;
 	margin:1em;
@@ -441,7 +442,7 @@ aside h4, .archive aside header {
 	margin-top:0;
 	margin-bottom:.675em;
 	padding-top:0;
-	font-size:1.3em;
+	font-size:130%;
 	font-weight:700;
 }
 p+aside{
@@ -453,9 +454,8 @@ main address {
 	padding-top:1em;
 	padding-bottom:1em;
 	padding-left:4em;
-	display: block;
-	position:relative;
-	width:40%;
+
+	width:50%;
 }
 main address:before {
 	color:#ddbea1;
@@ -532,7 +532,7 @@ th {
 	padding-bottom:1em;
 	font-size:1.1em;
 	vertical-align: middle;
-	background-color: #D7DADB !important;
+	background-color: #d7dadb !important;
 }
 tr td, th {
 	padding:.3em;
@@ -862,7 +862,6 @@ main .mainAccordion .ui-accordion-content ul {
 .blog-loop h4, .archive .post .article-header {
 	padding-bottom:0;
 	padding-top:0;
-	margin-bottom:-12px;
 	margin-top:0;
 	text-transform: none;
 }
@@ -870,27 +869,25 @@ main .mainAccordion .ui-accordion-content ul {
 	font-size: 90%;
 	color:#5e6a71;
 }
-.blog-excerpt, .article-summary {
-	display: block;
+.blog-excerpt {
 	margin-bottom:0;
-	margin-top:2em;
+	padding-bottom:.8em;
+	margin-top:1.2em;
+}
+.archive .article-summary {
+	padding-top:1.2em;
 }
 .blog-cattag, .article-footer {
-	display: block;
-	width:90%;
 	padding:.5em;
-	background-image:url('/wp-content/uploads/sites/61/2014/06/bg-fourty.png');
-	background-attachment: fixed;
-	background-color: #eddccc;
 	border-style:solid;
-	border-color:#ddbea1;
-	border-width:1px 1px 1px 1px;
-	text-shadow:0px 1px 1px #f5f5f5;
+	border-color:#d7dadb;
+	border-width:1px 0px 0px 0px;
 }
-.article-header hgroup.source, .article-header .hgroup.source {
+.article-header hgroup.source {
 	text-transform: none;
 	font-size: 1.1em;
-	padding-top:8px;
+	margin-bottom:1em;
+	display:block;
 }
 .archive .article-header hgroup .article-title {
 	text-decoration: none;
@@ -899,7 +896,7 @@ main .mainAccordion .ui-accordion-content ul {
 }
 .archive .article-footer {
 	margin-top:.8em;
-	margin-bottom:.8em;
+	margin-bottom:1.2em;
 }
 .archive aside {
 	padding:.7em;
@@ -922,7 +919,6 @@ main .mainAccordion .ui-accordion-content ul {
 	display:inline-block;
 }
 .archive .post {
-	border-top: solid 1px #d7dadb; 
 	padding-left:2em;
 }
 .archive .post:first-child {
@@ -1252,7 +1248,12 @@ main .mainAccordion .ui-accordion-content ul {
 
 **************************************************************************
 *********************************************************************** */
-
+@media (min-width: 990px) { 
+	/* Home rebound column size for full width */
+	.home .sky .rebound .column {
+		width:1272px;
+	} 
+}
 @media (max-width: 990px) { 
 /* Block quotes */
 	.bqmd {
@@ -1362,13 +1363,14 @@ main .mainAccordion .ui-accordion-content ul {
 		width:100%;
 		margin-bottom:1em;
 	}
-	address {
-	padding-top:1em;
-	padding-bottom:1em;
-	padding-left:1em;
-	display: block;
-	position:relative;
-	width:90%;
+	main address {
+		padding-left:1.5em;
+		width:90%;
+	}
+	main address:before {
+		font-size: 1em;
+		margin-left:-1.6em;
+		padding-top:2px;
 	}
 }
 
