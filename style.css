@@ -329,10 +329,10 @@ main a:hover, main a:focus, .content-modal-close:hover, .content-modal-close:foc
 	border-bottom:1px solid #193838;
 	background-color:#d3e1e3;
 	color: #193838;
-	-webkit-transition: background-color 0.5s linear;
-	-moz-transition: background-color 0.5s linear;
-	-o-transition: background-color 0.5s linear;
-	transition: background-color 0.5s linear;
+	-webkit-transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+	transition: background-color 0.3s linear;
 }
 main a img {
 	text-decoration: none !important;
@@ -753,7 +753,7 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-right:1%;
 }
 #fixedSide .fixed {
-	width:20%;
+	width:100%;
 }
 #fixedSide h5 {
 	margin-bottom:1em;
@@ -1073,6 +1073,11 @@ main .mainAccordion .ui-accordion-content ul {
 	display:block;
 	width:100%;
 	height: 100%;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 .metro ul li a .label {
 	width:100%;
