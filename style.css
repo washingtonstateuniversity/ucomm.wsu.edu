@@ -1249,12 +1249,6 @@ main .mainAccordion .ui-accordion-content ul {
 
 **************************************************************************
 *********************************************************************** */
-@media (min-width: 990px) { 
-	/* Home rebound column size for full width */
-	.home .sky .rebound .column {
-		width:1272px;
-	} 
-}
 @media (max-width: 990px) { 
 /* Block quotes */
 	.bqmd {
@@ -1358,6 +1352,7 @@ main .mainAccordion .ui-accordion-content ul {
 	}
 	.metro ul li a .label h3 {
 		margin:-0.5em 0.5em -.5em;
+		border-bottom:1px solid #d7dadb;
 	}
 	.nested-thirds .nested-one,.nested-thirds .nested-two,.nested-thirds .nested-three {
 		width:100%;
