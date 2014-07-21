@@ -9,6 +9,11 @@
 <script>
 (function($){
 	var fixed_side = jQuery('#fixedSide');
+
+	if ( 0 === fixed_side.length ) {
+		return;
+	}
+
 	var fixed_section_top = fixed_side.parents('section').position().top;
 	var fixed_section_width = fixed_side.width();
 
