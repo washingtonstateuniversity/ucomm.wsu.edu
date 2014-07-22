@@ -881,6 +881,8 @@ main .mainAccordion .ui-accordion-content ul {
 	border-style:solid;
 	border-color:#d7dadb;
 	border-width:1px 0px 0px 0px;
+	display: block;
+	width:100%;
 }
 .article-header hgroup.source {
 	text-transform: none;
