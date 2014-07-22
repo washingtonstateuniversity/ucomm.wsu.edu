@@ -1227,6 +1227,7 @@ main .mainAccordion .ui-accordion-content ul {
 	padding-top: 1.2em;
 	padding-bottom:1em;
 	text-align: center;
+	width: 792px;
 }
 .home .sky h1 {
 	font-size: 400%;
@@ -1236,7 +1237,6 @@ main .mainAccordion .ui-accordion-content ul {
 	color:white;
 	font-family: "OpenSans-CondLight";
 	letter-spacing: -1px;
-	padding-left:98px;
 }
 .home .lead {
 	margin:28px 28px 36px 28px;
