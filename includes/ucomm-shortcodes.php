@@ -10,6 +10,7 @@ class UComm_Shortcodes {
 		add_shortcode( 'call_action', array( $this, 'call_action_display' ) );
 		add_shortcode( 'home_blog', array( $this, 'home_blog_display' ) );
 		add_shortcode( 'home_nav', array( $this, 'home_nav_display' ) );
+		add_shortcode( 'print_blog', array( $this, 'print_blog_display' ) );
 	}
 
 	/**
@@ -126,6 +127,51 @@ class UComm_Shortcodes {
 							<li class="descripto">The work of University Communications photographers and videographers entertains and educates while advancing the WSU brand.</li> </ul></a></li>
 			</ul>
 		</nav>
+		<?php
+		$content = ob_get_contents();
+		ob_end_clean();
+
+		return $content;
+	}
+
+	/**
+	 * Handle the display of the svg_ shortcode.
+	 *
+	 * @return string HTML output
+	 */
+	public function print_blog_display() {
+		// Build the output to return for use by the shortcode.
+		ob_start();
+		?>
+		<ul class="blog-loop">
+			<?php
+			$args = array(
+				'posts_per_page' => 4,
+				'offset'=> 0,
+				'post_type' => 'post',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'category',
+						'field' => 'slug',
+						'terms' => 'print'
+					),
+				),
+			);
+
+			$my_posts = new WP_Query( $args );
+
+			if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->the_post();
+				?>
+				<li class="nested-seperated">
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<span class="blog-excerpt"><?php the_excerpt(); ?></span>
+					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
+				</li>
+			<?php endwhile; endif;
+			wp_reset_query();
+			?>
+
+		</ul>
 		<?php
 		$content = ob_get_contents();
 		ob_end_clean();
