@@ -7,6 +7,7 @@ include_once( 'includes/print-blog.php' ); // Include shortcode plugin.
 include_once( 'includes/library-of-work.php' ); // Handles library of work shortcode
 include_once( 'includes/cta.php' ); // Include shortcode plugin.
 include_once( 'includes/web-template.php' );
+include_once( 'includes/ucomm-shortcodes.php' ); // Handle custom shortcodes for Ucomm.
 
 add_action( 'after_setup_theme', 'ucomm_setup_theme' );
 /**
