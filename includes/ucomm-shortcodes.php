@@ -15,7 +15,7 @@ class UComm_Shortcodes {
 	}
 
 	/**
-	 * Handle the display of the svg_ shortcode.
+	 * Handle the display of the call_action shortcode.
 	 *
 	 * @return string HTML output
 	 */
@@ -34,7 +34,8 @@ class UComm_Shortcodes {
 	}
 
 	/**
-	 * Handle the display of the svg_ shortcode.
+	 * Handle the display of the home_blog shortcode, which displays a list of
+	 * blog posts on the static home page.
 	 *
 	 * @return string HTML output
 	 */
@@ -98,7 +99,7 @@ class UComm_Shortcodes {
 	}
 
 	/**
-	 * Handle the display of the svg_ shortcode.
+	 * Handle the display of the home_nav shortcode.
 	 *
 	 * @return string HTML output
 	 */
@@ -136,7 +137,7 @@ class UComm_Shortcodes {
 	}
 
 	/**
-	 * Handle the display of the svg_ shortcode.
+	 * Handle the display of the print_blog shortcode.
 	 *
 	 * @return string HTML output
 	 */
