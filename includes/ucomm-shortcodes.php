@@ -65,11 +65,7 @@ class UComm_Shortcodes {
 				<li class="nested-seperated">
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<hgroup class="source">
-						<?php
-						echo '<time class="article-date" datetime="'.get_the_date( 'c' ).'">';
-						echo the_date();
-						echo '</time>';
-						?>
+						<time class="article-date" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 						<cite class="article-author" role="author"><?php the_author_posts_link(); ?></cite>
 					</hgroup>
 					<span class="blog-excerpt"><?php the_excerpt(); ?></span>
