@@ -199,7 +199,7 @@ class UComm_Shortcodes {
 						$thumb_url = false;
 					}
 					?>
-					<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo $thumb_url; ?>');" <?php } ?> >
+					<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo esc_url( $thumb_url ); ?>');" <?php } ?> >
 						<a class="modal" data-post-id="<?php echo $post->ID; ?>" href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>
