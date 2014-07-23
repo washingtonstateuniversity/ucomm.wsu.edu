@@ -79,3 +79,24 @@ function spine_params( $parameters, $table_id, $html_id, $js_options ) {
 
 	return $parameters;
 }
+
+add_action( 'pre_get_posts', 'ucomm_blog_pre_get_posts' );
+/**
+ * Filter the 'blog' page to only display posts with the category of home.
+ *
+ * @param WP_Query $query
+ */
+function ucomm_blog_pre_get_posts( $query ) {
+	if ( ! $query->is_home() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	$args = array(
+		array(
+			'taxonomy' => 'category',
+			'field' => 'slug',
+			'terms' => 'home',
+		),
+	);
+	$query->set( 'tax_query', $args );
+}
