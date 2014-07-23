@@ -69,12 +69,8 @@ class UComm_Shortcodes {
 						echo '<time class="article-date" datetime="'.get_the_date( 'c' ).'">';
 						echo the_date();
 						echo '</time>';
-
-						// Published by
-						$author = get_the_author();
-						$author_articles = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
-						echo ' <cite class="article-author" role="author"><a href="'.$author_articles.'">'.$author.'</a></cite>';
 						?>
+						<cite class="article-author" role="author"><?php the_author_posts_link(); ?></cite>
 					</hgroup>
 					<span class="blog-excerpt"><?php the_excerpt(); ?></span>
 					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
