@@ -177,7 +177,9 @@ main .site .addGray {
 	background: linear-gradient(45deg, rgba(198,12,48,1) 0%,rgba(152,30,50,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#981e32',GradientType=1 );
 }
-
+#jacket.size-lt-medium {
+	padding-top:50px;
+}
 
 /* ***********************************************************************
 **************************************************************************
@@ -189,7 +191,7 @@ main .site .addGray {
 .site > a:nth-child(1) {
 	font-family: "OpenSans-CondLight";
 }
-main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon, .archive .post .article-header:before {
+main ul li:before, a[href$=".pdf"]:after, blockquote:before, main hr:after, main address:before, main .mainAccordion .ui-icon, .archive .post .article-header:before,.blog .post .article-header:before {
 	font-family: "SSPika";
 }
 .article-header h1, .lead, main footer, main figcaption, .source, .metro ul li a .label h3  {
@@ -846,7 +848,7 @@ main .mainAccordion .ui-accordion-content ul {
 	left:-2em;
 	top:.8em;
 }
-.archive .post .article-header:before {
+.archive .post .article-header:before, .blog .post .article-header:before {
 	content: '\e973';
 	display:inline-block;
 	position:absolute;
@@ -854,14 +856,17 @@ main .mainAccordion .ui-accordion-content ul {
 	top:1em;
 	font-size:1.2em;
 }
-.blog-loop h4, .archive .post .article-header {
+.blog-loop h4, .archive .post .article-header, .blog .post .article-header  {
 	padding-bottom:0;
 	padding-top:0;
 	margin-top:0;
+	margin-bottom:0;
+	height:100%;
 	text-transform: none;
 }
 .blog-loop .source {
 	margin-bottom:1em;
+	margin-top:.4em;
 	color: rgba(0, 0, 0, 0.5);
 }
 .blog-meta, .blog-cattag, .blog-excerpt {
@@ -872,12 +877,9 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-top:1.2em;
 	padding-bottom:.8em;
 }
-.archive .article-summary {
-	padding-top:1.2em;
-}
 .blog-cattag, .article-footer {
 	color: rgba(0, 0, 0, 0.5);
-	padding:.5em 0 .5em 0;
+	padding:.8em 0 .5em 0;
 	border-style:solid;
 	border-color:#d7dadb;
 	border-width:1px 0px 0px 0px;
@@ -890,50 +892,47 @@ main .mainAccordion .ui-accordion-content ul {
 	margin-bottom:1em;
 	display:block;
 }
-.archive .article-header hgroup .article-title {
+.archive .article-header hgroup .article-title, .blog .article-header hgroup .article-title {
 	text-decoration: none;
 	font-size: 150%;
 	padding-bottom:0;
 }
-.archive .article-footer {
+.archive .article-footer, .blog .article-footer  {
 	margin-top:.8em;
 	margin-bottom:3em;
 }
-.archive aside {
-	padding:.7em;
-}
-.archive aside {
+.archive aside, .blog aside {
 	font-size: 90%;
-	padding:.8em;
+	padding:.9em;
 }
-.archive aside form {
+.archive aside form, .blog aside form {
 	padding:0;
 }
-.archive aside form #s {
+.archive aside form #s, .blog aside form #s  {
 	width:100%;
 }
-.archive aside form input {
+.archive aside form input, .blog aside form input {
 	margin-top:.5em;
 	margin-bottom:.5em;
 }
-.archive aside form input, .archive aside form label {
+.archive aside form input, .archive aside form label, .blog aside form input, .blog aside form label  {
 	display:inline-block;
 }
-.archive .post {
+.archive .post, .blog .post {
 	padding-left:2em;
 }
-.archive .post:first-child {
+.archive .post:first-child,.blog .post:first-child {
 	border-top:none;
 }
-.archive .article-header {
+.archive .article-header,.blog .article-header  {
 	padding-bottom:0;
 	margin-bottom:1.5em;
 	display:block;
 }
-.archive .post .article-header:first-child {
+.archive .post .article-header:first-child, .blog .post .article-header:first-child {
 	padding-top:0;
 }
-.archive .post .article-summary a {
+.archive .post .article-summary a,.blog .post .article-summary a  {
 	margin-left:.5em;
 	display:inline-block;
 }
@@ -1271,6 +1270,9 @@ main .mainAccordion .ui-accordion-content ul {
 **************************************************************************
 *********************************************************************** */
 @media (max-width: 790px) {
+	#binder.fluid main, #binder.hybrid main {
+		padding-top:0;
+	}
 	main .ucomm-bookmark {
 		text-align: left;
 		left:1em;
@@ -1326,6 +1328,7 @@ main .mainAccordion .ui-accordion-content ul {
 	.home .sky h1 {
 		font-size: 280%;
 		padding-left:0;
+		margin-top:0;
 	}
 	.home .lead {
 		font-size: 130%;
