@@ -1,7 +1,6 @@
 <?php
 add_filter( 'spine_enable_builder_module', '__return_true' );
 
-include_once( 'includes/library-of-work.php' ); // Handles library of work shortcode
 include_once( 'includes/web-template.php' );
 include_once( 'includes/ucomm-shortcodes.php' ); // Handle custom shortcodes for Ucomm.
 
