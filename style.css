@@ -995,7 +995,7 @@ main .mainAccordion .ui-accordion-content ul {
 	position: relative;
 	background-color:#f5f5f5;
 	padding: 28px;
-	width: 800px;
+	width: 80%;
 	margin: 100px auto 0 auto;
 }
 .content-modal-close {
