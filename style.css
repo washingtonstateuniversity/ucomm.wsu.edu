@@ -91,10 +91,6 @@ You can find the photos and video image in the WordPress CSS Stylesheet Editor
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-body {
-	background-image:url('/wp-content/uploads/sites/61/2014/06/bg.png');
-	background-attachment: fixed;
-}
 main {
 	background-color:#F4F5F5;
 	color: #464e54;
