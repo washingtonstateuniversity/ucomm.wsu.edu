@@ -24,42 +24,42 @@
 (il).-''  ((i).'  ((!.-'
 
 # Table of contents desktop
-	## Imports - Line 
-	## Parent DOM alterations - Line 
-	## Parent Spine alterations - Line 
-	## Define Typography - Line 
-	## Standard HTML elements - Line 
-		### Headers - Line 
-		### Paragraph - Line 
-			#### Paragraph specialties - Line 
-		### Ordered lists and Unordered lists - Line 
-		### Links - line
-		### Blockquotes and citations - Line 
-		### sup, sub, em, samp, and strike - Line
-		### Images - Line
-	## HTML structures - Line
-		### Aside - Line
-		### Address - Line
-		### Figure - Line
-		### Footer - Line
-		### Tables - Line
-		### Forms - Line
-		### Seperators - Line
-	## Javascript elements - Line
-		### Accordion - Line
-		### Fixing elements to top on scroll - Line
-	## Helper elements structure - Line
-	## Helper elements assistance - Line
-	## Blog and single post - Line
-	## Call to action - Line
-	## Metro navigation - Line
-	## Page specific targeting - Line
-		### Homepage / - Line
+	## Imports - Line 75
+	## Parent DOM alterations - Line 86
+	## Parent Spine alterations - Line 102
+	## Define Typography - Line 183
+	## Standard HTML elements - Line 205
+		### Headers - Line 210
+		### Paragraph - Line 242
+			#### Paragraph specialties - Line 253
+		### Ordered lists and Unordered lists - Line 271
+		### Links - line 320
+		### Blockquotes and citations - Line 346
+		### sup, sub, em, samp, and strike - Line 396
+		### Images - Line 402
+	## HTML structures - Line 410
+		### Aside - Line 415
+		### Address - Line 444
+		### Figure - Line 471
+		### Footer - Line 485
+		### Tables - Line 503
+		### Forms - Line 582
+		### Seperators - Line 591
+	## Javascript elements - Line 632
+		### Accordion - Line 637
+		### Fixing elements to top on scroll - Line 691
+	## Helper elements structure - Line 699
+	## Helper elements assistance - Line 781
+	## Blog and single post - Line 828
+	## Call to action - Line 1009
+	## Metro navigation - Line 1039
+	## Page specific targeting - Line 1201
+		### Homepage / - Line 1206
 
 # Table of contents media devices
-	## Min/Max 990 - Line
-	## Min/Max 790 - Line
-	## Min/Max 480 - Line
+	## Min/Max 990 - Line 1245
+	## Min/Max 790 - Line 1264
+	## Min/Max 480 - Line 1380
 
 #Notes of interest
 
@@ -399,7 +399,7 @@ main sup {
 	font-size: 95%;
 }
 
-/* ### images
+/* ### Images
 *********************************************************************** */
 
 	/* img {} */
