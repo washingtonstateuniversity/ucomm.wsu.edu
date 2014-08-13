@@ -105,7 +105,7 @@ class UComm_Shortcodes {
 							<li class="descripto">Email is the #1 activity on smartphones and tablets, according to Pew Research. University Communications writes and designs emails that captivate readers on the full range of devices.</li> </ul></a></li>
 				<li class="printed"><a href="/print/"> <ul class="label">
 							<h3>Printed materials</h3>
-							<li class="descripto">Want your print publications get noticed, read, and remembered? We’ll work with you to strategically plan print pieces that build awareness of your initiatives and shape audience attitudes.</li> </ul></a></li>
+							<li class="descripto">Want your print publications to get noticed, read, and remembered? We’ll work with you to strategically plan print pieces that build awareness of your initiatives and shape audience attitudes.</li> </ul></a></li>
 				<li class="presentations"><a href="/presentations/"> <ul class="label">
 							<h3>Presentations</h3>
 							<li class="descripto">Deliver your message with clarity and impact, while leveraging the strength of the WSU brand.</li> </ul></a></li>
