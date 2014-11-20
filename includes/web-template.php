@@ -29,11 +29,24 @@ class WSUWP_Web_Template {
 	 * @return array Modified list of nav menu classes.
 	 */
 	public function modify_current_nav_item( $classes ) {
-		if ( in_array( 'template-current-nav', $classes ) ) {
+		if ( $this->is_template_request() && in_array( 'template-current-nav', $classes ) ) {
 			return array( 'current-menu-item' );
 		}
 
 		return array();
+	}
+
+	/**
+	 * Determine if this is a template request.
+	 *
+	 * @return bool
+	 */
+	public function is_template_request() {
+		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/web-template/' ) ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	/**
@@ -51,7 +64,7 @@ class WSUWP_Web_Template {
 	 * the JSON is output.
 	 */
 	public function handle_template_request() {
-		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/web-template/' ) ) {
+		if ( $this->is_template_request() ) {
 			if ( isset( $_GET['html_title'] ) ) {
 				$this->html_title = $_GET['html_title'];
 			}
