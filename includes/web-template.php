@@ -14,6 +14,26 @@ class WSUWP_Web_Template {
 	 */
 	public function __construct() {
 		add_action( 'template_redirect', array( $this, 'handle_template_request' ) );
+		add_filter( 'nav_menu_css_class', array( $this, 'modify_current_nav_item' ), 7 );
+	}
+
+	/**
+	 * When consuming a web template, there's no great way to mark an
+	 * item in the nav menu as "current". This first attempt looks for
+	 * the CSS class `template-current-nav` and translates that to
+	 * `current-menu-item`. This is later translated to `current` by the
+	 * Spine Parent Theme.
+	 *
+	 * @param array $classes Current list of nav menu classes.
+	 *
+	 * @return array Modified list of nav menu classes.
+	 */
+	public function modify_current_nav_item( $classes ) {
+		if ( in_array( 'template-current-nav', $classes ) ) {
+			return array( 'current-menu-item' );
+		}
+
+		return array();
 	}
 
 	/**
