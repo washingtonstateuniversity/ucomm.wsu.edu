@@ -33,7 +33,7 @@ class WSUWP_Web_Template {
 			return array( 'current-menu-item' );
 		}
 
-		return array();
+		return $classes;
 	}
 
 	/**
