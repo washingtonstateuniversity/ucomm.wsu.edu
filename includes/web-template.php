@@ -31,6 +31,8 @@ class WSUWP_Web_Template {
 	public function modify_current_nav_item( $classes ) {
 		if ( $this->is_template_request() && in_array( 'template-current-nav', $classes ) ) {
 			return array( 'current-menu-item' );
+		} elseif ( $this->is_template_request() && ( in_array( 'current-menu-item', $classes ) || in_array( 'current_page_parent', $classes ) ) ) {
+			return array();
 		}
 
 		return $classes;
