@@ -57,7 +57,7 @@ class WSUWP_Web_Template {
 	 * @return string Modified title text.
 	 */
 	public function set_html_title() {
-		return esc_html( $this->html_title . ' | ' );
+		return esc_html( $this->html_title . ' | Washington State University' );
 	}
 
 	/**
@@ -71,10 +71,10 @@ class WSUWP_Web_Template {
 				$this->html_title = $_GET['html_title'];
 			}
 
-			add_filter( 'wp_title', array( $this, 'set_html_title' ) );
+			add_filter( 'spine_get_title', array( $this, 'set_html_title' ) );
 			$pre = $this->build_pre_content();
 			$post = $this->build_post_content();
-			remove_filter( 'wp_title', array( $this, 'set_html_title' ) );
+			remove_filter( 'spine_get_title', array( $this, 'set_html_title' ) );
 
 			header('HTTP/1.1 200 OK');
 			header('Content-Type: application/json');
