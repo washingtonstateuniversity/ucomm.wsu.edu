@@ -4,9 +4,9 @@
 		var html = '<div class="content-modal"><div class="content-modal-content"><div class="content-modal-close"><span class="ss-icon">Close</span></div>' +
 			'<section class="row single"><div class="column one">' +
 			'<article><header class="article-header"><h1 class="article-title">' +
-			data.title +
+			data.title.rendered +
 			'</h1></header><div class="article-body">' +
-			data.content +
+			data.content.rendered +
 			'</div></article>' +
 			'</div></section></div></div>';
 		$('main' ).append(html);
