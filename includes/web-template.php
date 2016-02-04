@@ -66,6 +66,8 @@ class WSUWP_Web_Template {
 	 * the JSON is output.
 	 */
 	public function handle_template_request() {
+		global $wp_query;
+
 		if ( $this->is_template_request() ) {
 			if ( isset( $_GET['html_title'] ) ) {
 				$this->html_title = $_GET['html_title'];
@@ -76,6 +78,8 @@ class WSUWP_Web_Template {
 			$post = $this->build_post_content();
 			remove_filter( 'spine_get_title', array( $this, 'set_html_title' ) );
 
+			status_header( 200 );
+			$wp_query->is_404 = false;
 			header('HTTP/1.1 200 OK');
 			header('Content-Type: application/json');
 			echo json_encode( array( 'before_content' => $pre, 'after_content' => $post ) );
