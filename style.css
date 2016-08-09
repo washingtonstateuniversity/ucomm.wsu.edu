@@ -11,30 +11,30 @@
 
 /* Main repeating background */
 body {
-	background-image: url('/wp-content/uploads/sites/61/2014/06/bg.png');
+	background-image: url("./assets/images/bg.png");
 	background-attachment: fixed;
 	background-repeat: repeat;
 }
 
 /* Change the homepage photos */
 .metro .web {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/webhome.jpg");
+	background-image: url("./assets/images/webhome.jpg");
 }
 
 .metro .email {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/metro-email.jpg");
+	background-image: url("./assets/images/metro-email.jpg");
 }
 
 .metro .printed {
-	background-image: url("/wp-content/uploads/sites/61/2014/07/innovators-home.jpg");
+	background-image: url("./assets/images/innovators-home.jpg");
 }
 
 .metro .presentations {
-	background-image: url("/wp-content/uploads/sites/61/2014/06/presentation.jpg");
+	background-image: url("./assets/images/presentation.jpg");
 }
 
 .metro .photo {
-	background-image: url("/wp-content/uploads/sites/61/2014/07/photosvideo.jpg");
+	background-image: url("./assets/images/photosvideo.jpg");
 }
 
 /* Change the photo and video page photo */
@@ -45,7 +45,7 @@ body {
 	background-position: 0 25%;
 	background-repeat: no-repeat;
 	margin-bottom: 50px;
-	background-image: url("/wp-content/uploads/sites/61/2014/06/campusview.jpg");
+	background-image: url("./assets/images/campusview.jpg");
 }
 
 /* Video background on homepage */
@@ -512,7 +512,7 @@ main sup {
 /* ### Aside
 *********************************************************************** */
 aside {
-	background-image: url('/wp-content/uploads/sites/61/2014/06/bg-fourty.png');
+	background-image: url("./assets/images/bg-fourty.png");
 	background-attachment: fixed;
 	background-color: #eddccc;
 	padding: 2em;
