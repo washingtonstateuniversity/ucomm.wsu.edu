@@ -7,7 +7,7 @@ class WSUWP_Web_Template {
 	/**
 	 * @var string The desired text to be prepended to the html TITLE element.
 	 */
-	var $html_title = 'University Communications';
+	public $html_title = 'University Communications';
 
 	/**
 	 * Add hooks.
@@ -29,9 +29,9 @@ class WSUWP_Web_Template {
 	 * @return array Modified list of nav menu classes.
 	 */
 	public function modify_current_nav_item( $classes ) {
-		if ( $this->is_template_request() && in_array( 'template-current-nav', $classes ) ) {
+		if ( $this->is_template_request() && in_array( 'template-current-nav', $classes, true ) ) {
 			return array( 'current-menu-item' );
-		} elseif ( $this->is_template_request() && ( in_array( 'current-menu-item', $classes ) || in_array( 'current_page_parent', $classes ) ) ) {
+		} elseif ( $this->is_template_request() && ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current_page_parent', $classes, true ) ) ) {
 			return array();
 		}
 
@@ -69,8 +69,8 @@ class WSUWP_Web_Template {
 		global $wp_query;
 
 		if ( $this->is_template_request() ) {
-			if ( isset( $_GET['html_title'] ) ) {
-				$this->html_title = $_GET['html_title'];
+			if ( isset( $_GET['html_title'] ) ) { // WPCS: CSRF Ok.
+				$this->html_title = $_GET['html_title']; // WPCS: CSRF Ok.
 			}
 
 			add_filter( 'spine_get_title', array( $this, 'set_html_title' ) );
@@ -82,7 +82,7 @@ class WSUWP_Web_Template {
 			$wp_query->is_404 = false;
 			header( 'HTTP/1.1 200 OK' );
 			header( 'Content-Type: application/json' );
-			echo json_encode(
+			echo wp_json_encode(
 				array(
 					'before_content' => $pre,
 					'after_content' => $post,

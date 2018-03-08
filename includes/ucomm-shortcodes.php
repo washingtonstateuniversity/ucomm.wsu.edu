@@ -73,7 +73,7 @@ class UComm_Shortcodes {
 				</li>
 			<?php endwhile;
 endif;
-			wp_reset_query();
+			wp_reset_postdata();
 			?>
 
 		</ul>
@@ -157,7 +157,7 @@ endif;
 				</li>
 			<?php endwhile;
 endif;
-			wp_reset_query();
+			wp_reset_postdata();
 			?>
 
 		</ul>
@@ -205,7 +205,7 @@ endif;
 					}
 					?>
 					<li class="lib" <?php if ( $thumb_url ) { ?>style="background:url('<?php echo esc_url( $thumb_url ); ?>');" <?php } ?> >
-						<a class="modal" data-post-id="<?php echo $post->ID; ?>" href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
+						<a class="modal" data-post-id="<?php echo esc_attr( $post->ID ); ?>" href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>
 					</li>

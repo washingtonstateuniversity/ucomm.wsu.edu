@@ -12,7 +12,7 @@ if ( has_post_thumbnail( get_the_ID() ) ) {
 $position = get_post_meta( get_the_id(), 'position', true );
 if ( ! empty( $position ) ) {
 	$position = absint( $position ) - 132;
-	?><style>main section:nth-of-type(1) { margin-top: <?php echo $position; ?>px; }</style><?php
+	?><style>main section:nth-of-type(1) { margin-top: <?php echo esc_attr( $position ); ?>px; }</style><?php
 }
 
 ?>
@@ -23,13 +23,13 @@ if ( ! empty( $position ) ) {
 
 <section class="row single">
 	<div class="column one">
-	
+
 		<?php while ( have_posts() ) : the_post(); ?>
-				
+
 			<?php get_template_part( 'articles/post' ) ?>
 
 		<?php endwhile; ?>
-		
+
 		</div> <!--/column-->
 
 </section>
@@ -47,6 +47,8 @@ if ( ! empty( $position ) ) {
 
 </main><!--/#page-->
 
-<a href="<?php echo get_edit_post_link(); ?>" class="wp-edit-link">Edit</a>
+<a href="<?php echo esc_url( get_edit_post_link() ); ?>" class="wp-edit-link">Edit</a>
 
-<?php get_footer(); ?>
+<?php
+
+get_footer();
