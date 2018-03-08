@@ -1,16 +1,16 @@
 ( function( $ ) {
 
 	function display_modal_data( data ) {
-		var html = '<div class="content-modal"><div class="content-modal-content"><div class="content-modal-close"><span class="ss-icon">Close</span></div>' +
-			'<section class="row single"><div class="column one">' +
-			'<article><header class="article-header"><h1 class="article-title">' +
+		var html = "<div class=\"content-modal\"><div class=\"content-modal-content\"><div class=\"content-modal-close\"><span class=\"ss-icon\">Close</span></div>" +
+			"<section class=\"row single\"><div class=\"column one\">" +
+			"<article><header class=\"article-header\"><h1 class=\"article-title\">" +
 			data.title.rendered +
-			'</h1></header><div class="article-body">' +
+			"</h1></header><div class=\"article-body\">" +
 			data.content.rendered +
 			"</div></article>" +
 			"</div></section></div></div>";
 		$( "main" ).append( html );
-		$( ".content-modal-close" ).on( "click", function( e ) {
+		$( ".content-modal-close" ).on( "click", function() {
 			$( ".content-modal" ).remove();
 		} );
 	}
