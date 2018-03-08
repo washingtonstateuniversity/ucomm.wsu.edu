@@ -47,20 +47,20 @@ class UComm_Shortcodes {
 			<?php
 			$args = array(
 				'posts_per_page' => 4,
-				'offset'=> 0,
+				'offset' => 0,
 				'post_type' => 'post',
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'category',
 						'field' => 'slug',
-						'terms' => 'home'
+						'terms' => 'home',
 					),
 				),
 			);
 
 			$my_posts = new WP_Query( $args );
 
-			if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->the_post();
+			if ( $my_posts->have_posts() ) : while ( $my_posts->have_posts() ) : $my_posts->the_post();
 				?>
 				<li class="nested-seperated">
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
@@ -69,9 +69,10 @@ class UComm_Shortcodes {
 						<cite class="article-author" role="author"><?php the_author_posts_link(); ?></cite>
 					</hgroup>
 					<span class="blog-excerpt"><?php the_excerpt(); ?></span>
-					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
+					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', '' ); ?></span>
 				</li>
-			<?php endwhile; endif;
+			<?php endwhile;
+endif;
 			wp_reset_query();
 			?>
 
@@ -134,27 +135,28 @@ class UComm_Shortcodes {
 			<?php
 			$args = array(
 				'posts_per_page' => 4,
-				'offset'=> 0,
+				'offset' => 0,
 				'post_type' => 'post',
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'category',
 						'field' => 'slug',
-						'terms' => 'print'
+						'terms' => 'print',
 					),
 				),
 			);
 
 			$my_posts = new WP_Query( $args );
 
-			if ( $my_posts->have_posts() ) : while( $my_posts->have_posts() ) : $my_posts->the_post();
+			if ( $my_posts->have_posts() ) : while ( $my_posts->have_posts() ) : $my_posts->the_post();
 				?>
 				<li class="nested-seperated">
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					<span class="blog-excerpt"><?php the_excerpt(); ?></span>
-					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', ''); ?></span>
+					<span class="blog-cattag"><?php the_tags( 'Tags: ', ', ', '' ); ?></span>
 				</li>
-			<?php endwhile; endif;
+			<?php endwhile;
+endif;
 			wp_reset_query();
 			?>
 
@@ -187,10 +189,13 @@ class UComm_Shortcodes {
 			<ul>
 				<?php
 				global $post;
-				$args = array( 'posts_per_page' => 12, 'tag' => $atts['tag'] );
-				$myposts = get_posts( $args);
-				foreach( $myposts as $post ) {
-					setup_postdata($post);
+				$args = array(
+					'posts_per_page' => 12,
+					'tag' => $atts['tag'],
+				);
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) {
+					setup_postdata( $post );
 					$thumbnail_id = get_post_thumbnail_id( $post->ID );
 					$thumb_url = wp_get_attachment_image_src( $thumbnail_id );
 					if ( is_array( $thumb_url ) ) {
@@ -199,7 +204,7 @@ class UComm_Shortcodes {
 						$thumb_url = false;
 					}
 					?>
-					<li class="lib" <?php if( $thumb_url ) { ?>style="background:url('<?php echo esc_url( $thumb_url ); ?>');" <?php } ?> >
+					<li class="lib" <?php if ( $thumb_url ) { ?>style="background:url('<?php echo esc_url( $thumb_url ); ?>');" <?php } ?> >
 						<a class="modal" data-post-id="<?php echo $post->ID; ?>" href="<?php echo get_permalink( $post->ID ); ?>" title="<?php echo esc_attr( $post->post_title ); ?>">
 							<h3><?php the_title(); ?></h3>
 						</a>

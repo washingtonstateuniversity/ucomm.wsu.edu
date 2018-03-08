@@ -80,10 +80,15 @@ class WSUWP_Web_Template {
 
 			status_header( 200 );
 			$wp_query->is_404 = false;
-			header('HTTP/1.1 200 OK');
-			header('Content-Type: application/json');
-			echo json_encode( array( 'before_content' => $pre, 'after_content' => $post ) );
-			die(0);
+			header( 'HTTP/1.1 200 OK' );
+			header( 'Content-Type: application/json' );
+			echo json_encode(
+				array(
+					'before_content' => $pre,
+					'after_content' => $post,
+				)
+			);
+			die( 0 );
 		}
 	}
 
@@ -95,8 +100,8 @@ class WSUWP_Web_Template {
 	private function build_pre_content() {
 		ob_start();
 
-		$site_name      = get_bloginfo('name');
-		$site_tagline   = get_bloginfo('description');
+		$site_name      = get_bloginfo( 'name' );
+		$site_tagline   = get_bloginfo( 'description' );
 
 		get_header();
 		?>

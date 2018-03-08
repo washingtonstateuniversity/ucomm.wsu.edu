@@ -1,9 +1,9 @@
 <?php
 
 	global $post;
-	
-	$site_name      = get_bloginfo('name');
-	$site_tagline   = get_bloginfo('description');
+
+	$site_name      = get_bloginfo( 'name' );
+	$site_tagline   = get_bloginfo( 'description' );
 	$first_category = get_the_category();
 	$section_title  = get_the_category();
 ?>
@@ -19,7 +19,7 @@
 	}
 
 	if ( ( is_archive() || is_category() || is_single() ) && ! empty( $first_category ) && isset( $first_category[0]->cat_name ) ) {
-		echo '	<div class="category">'.$first_category[0]->cat_name.'</div>';
+		echo '	<div class="category">' . $first_category[0]->cat_name . '</div>';
 	}
 
 	if ( is_page() ) {
@@ -34,13 +34,13 @@
 </hgroup>
 </header>
 
-<?php 
+<?php
 
-	if ( is_archive() || is_home() ) {
-		echo '<div class="article-header pgbldrhead"><section class="row single article-title">
+if ( is_archive() || is_home() ) {
+	echo '<div class="article-header pgbldrhead"><section class="row single article-title">
 	<div class="column one">
 					<h1>Blog</h1>
 			</div>
 </section>
 </div>';
-	}
+}

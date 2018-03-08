@@ -19,7 +19,7 @@ if ( ! empty( $position ) ) {
 
 <main class="spine-single-template">
 
-<?php get_template_part('parts/headers'); ?>
+<?php get_template_part( 'parts/headers' ); ?>
 
 <section class="row single">
 	<div class="column one">

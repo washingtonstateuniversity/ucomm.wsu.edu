@@ -1,8 +1,8 @@
 <?php
 add_filter( 'spine_enable_builder_module', '__return_true' );
 
-include_once( 'includes/web-template.php' ); // Provides a JSON web template for external pages.
-include_once( 'includes/ucomm-shortcodes.php' ); // Handle custom shortcodes for Ucomm.
+require_once 'includes/web-template.php'; // Provides a JSON web template for external pages.
+require_once 'includes/ucomm-shortcodes.php'; // Handle custom shortcodes for Ucomm.
 
 add_action( 'after_setup_theme', 'ucomm_setup_theme' );
 /**
@@ -30,22 +30,22 @@ function ucomm_the_excerpt( $excerpt ) {
 	$excerpt = trim( $excerpt );
 
 	if ( '</p>' === substr( $excerpt, -4 ) ) {
-		$excerpt = substr( $excerpt, 0, -4 ); // strip </p>	
+		$excerpt = substr( $excerpt, 0, -4 ); // strip </p>
 		$excerpt = $excerpt . ' <a href="<?php echo get_permalink(); ?>">...read more</a></p>';
 	}
 
 	return $excerpt;
 }
-/* 
+/*
 Add responsive container to embeds
------------------------------------- */ 
-function embed_html($html) {
-    return '<div class="fluid-container">'.$html.'</div>';
+------------------------------------ */
+function embed_html( $html ) {
+	return '<div class="fluid-container">' . $html . '</div>';
 }
 add_filter( 'embed_oembed_html', 'embed_html', 99, 4 );
-/* 
+/*
 Add tablepress parameters
------------------------------------- */ 
+------------------------------------ */
 add_filter( 'tablepress_datatables_parameters', 'spine_params', 10, 4 );
 /**
  * Filter Tablepress's call of the Datatables plugin to add an "All" option for viewing
@@ -64,7 +64,7 @@ function spine_params( $parameters, $table_id, $html_id, $js_options ) {
 			10 => 10,
 			25 => 25,
 			50 => 50,
-			100 => 100
+			100 => 100,
 		);
 
 		if ( false === array_key_exists( $js_options['datatables_paginate_entries'], $lengths ) ) {
