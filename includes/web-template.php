@@ -7,7 +7,7 @@ class WSUWP_Web_Template {
 	/**
 	 * @var string The desired text to be prepended to the html TITLE element.
 	 */
-	public $html_title = 'University Communications';
+	public $html_title = 'University Marketing and Communications';
 
 	/**
 	 * Add hooks.
