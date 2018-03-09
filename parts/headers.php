@@ -10,7 +10,7 @@
 
 <header class="ucomm-bookmark">
 <hgroup>
-	<div class="site"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( $site_name ); ?>" rel="home">University <span class="addGray">Communications</span></a></div>
+	<div class="site"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( $site_name ); ?>" rel="home">University <span class="addGray">Marketing and Communications</span></a></div>
 	<div class="tagline"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( $site_tagline ); ?>" rel="home"><?php echo esc_html( $site_tagline ); ?></a></div>
 	<?php
 
