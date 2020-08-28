@@ -1,5 +1,3 @@
-<?php get_template_part( 'spine' ); ?>
-
 </div><!--/cover-->
 </div><!--/jacket-->
 
